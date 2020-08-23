@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-16.04
     steps:
       - name: Print a greeting
-        run: sudo apt-get install nodejs
+        run: sudo apt-get install nodejs ruby-full build-essential zlib1g-dev
       - name: Print a greeting
         run: sudo gem install execjs
       - name: Print a greeting
