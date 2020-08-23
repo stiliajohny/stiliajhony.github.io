@@ -9,9 +9,10 @@ jobs:
   github-pages:
     runs-on: ubuntu-16.04
     steps:
+      - name: Print a greeting
+        run: apt-get install nodejs
       - uses: actions/checkout@v2
       - uses: helaili/jekyll-action@2.0.1
         env:
           JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
-      - name: Print a greeting
-        run: apt-get install nodejs
+
