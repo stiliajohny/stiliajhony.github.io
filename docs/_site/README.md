@@ -1,1 +1,0 @@
-# Jekyll Theme Based Portfolio
