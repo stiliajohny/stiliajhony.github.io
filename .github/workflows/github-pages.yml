@@ -14,7 +14,9 @@ jobs:
       - name: Print a greeting
         run: sudo gem install execjs
       - name: Print a greeting
-        run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh |sudo  bash
+        run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh |sudo  bash 
+      - name: nvm install 5
+        run: sudo nvm install 5.9.1
       - uses: actions/checkout@v2
       - uses: helaili/jekyll-action@2.0.1
         env:
