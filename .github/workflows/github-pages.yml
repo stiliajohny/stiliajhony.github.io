@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Print a greeting
         run: sudo apt-get install nodejs
+      - name: Print a greeting
+        run: gem install execjs
       - uses: actions/checkout@v2
       - uses: helaili/jekyll-action@2.0.1
         env:
