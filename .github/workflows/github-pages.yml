@@ -1,19 +1,19 @@
-name: Build and deploy Jekyll site to GitHub Pages
+name: Jekyll Deploy
 
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  github-pages:
-    runs-on: ubuntu-16.04
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: helaili/jekyll-action@2.0.1
-        env:
-          JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
-        with:
-          pre_build_commands: |
-            sudo apt-get install nodejs
-
+    - uses: actions/checkout@v2
+    - name: Deploy Jekyll Site
+      uses: sujaykundu777/jekyll-deploy-action@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.JEKYLL_PAT }}
+        GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
+        GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
