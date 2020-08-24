@@ -1,9 +1,9 @@
 const themeMap = {
-  'default': {
+  'Theme Bright': {
     'background-color': 'white',
     'text-color': '#222'
   },
-  'dark': {
+  'Theme Dark': {
     'background-color': '#222',
     'text-color': 'white'
   }
