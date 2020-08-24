@@ -1,5 +1,5 @@
 ---
 layout: categories
 permalink: /categories/
-title: Rohit Jain | Categories
+title: John Stilia | Categories
 ---

@@ -1,5 +1,5 @@
-title: Rohit Jain
-email: rohitjain18005@gmail.com
+title: John Stilia
+email: stilia.johny@gmail.com
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://stiliajohny.github.io"
@@ -8,8 +8,8 @@ url: "https://stiliajohny.github.io"
 markdown: kramdown
 theme: dev-portfolio-blog
 resume_url: "Resume.pdf"
-author_name: Rohit Jain
-destination: ./build
+author_name: John Stilia
+destination: ./docs
 
 ############################################################
 # Site configuration for the Jekyll 3 Pagination Gem
@@ -141,11 +141,11 @@ assets:
 plugins:
   - jekyll-minifier
 
-google_analytics: 'UA-114665281-1'
+google_analytics: ''
 
 # Disqus Comments
 disqus:
-    shortname: rohitjain00
+    shortname: 'johnstilia'
 
 pwa: true
 

@@ -1,8 +1,8 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+# To modi
 
 layout: home
-home_text: Web developer who loves python.
-title: Rohit Jain
+home_text: DevOps Engineer who loves Security
+title: John Stilia
 ---
