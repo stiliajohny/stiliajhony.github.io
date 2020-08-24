@@ -145,7 +145,7 @@ google_analytics: ''
 
 # Disqus Comments
 disqus:
-    shortname: 'johnstilia'
+    shortname: 'stiliajony-github-io'
 
 pwa: true
 
