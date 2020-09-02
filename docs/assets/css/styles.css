@@ -161,3 +161,38 @@ body {
     margin: 10px 10px; }
   .blogPage-categoryList ul li:first-child {
     margin-left: 0; }
+
+body, html {
+  height: 100%;
+  font: 15px Courier, sans-serif; }
+
+* {
+  box-sizing: border-box; }
+
+.bg-image {
+  /* The image used */
+  background-image: url("back.svg");
+  background-repeat: repeat;
+  /* Add the blur effect */
+  filter: blur(20px);
+  -webkit-filter: blur(15px);
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-size: auto; }
+
+.bg-text {
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center; }
