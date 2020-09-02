@@ -5,7 +5,6 @@ pagetype: blog
 ---
 <!-- This loops through the paginated posts -->
 
-
 {% if paginator.total_posts == 0 %}
     <p>No posts right now.</p>
 {% else %}
@@ -20,10 +19,17 @@ pagetype: blog
 </div>
 <ul class="blog-list">
     {% for post in paginator.posts %}
-        <li>
-            <a class="blog-heading" href="{{ post.url | relative_url }}">{{ post.title }}</a><span class="date">{{ post.date | date_to_string }}</span>
-            <div class="excerpt">{{ post.excerpt }}</div>
-        </li>
+    <div class="post-preview">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+            <h2 class="post-title">{{ post.title }}</h2>
+        </a>
+        <p class="post-meta">
+            <span>Posted by <b>{{ post.author }}</b> on <b>{{ post.date | date_to_string }}</b>.</span>
+            <br>
+            {% include reading_time.html content=post.content %}
+        </p>
+    </div>
+    <hr>
     {% endfor %}
 </ul>
 {% endif %}
@@ -44,3 +50,5 @@ pagetype: blog
     {% endif %}
 </ul>
 {% endif %}
+
+
