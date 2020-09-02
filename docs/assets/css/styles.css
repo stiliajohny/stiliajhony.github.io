@@ -1,13 +1,12 @@
 html {
   --primary-background-color: white;
-  --primary-text-color: #222;
-  padding: 0;
-  margin: 0; }
+  --primary-text-color: #222; }
 
 body {
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
-  transition: background 0.1s ease-in, color 0.1s ease-in; }
+  transition: background 0.1s ease-in, color 0.1s ease-in;
+  font-size: 120%; }
 
 .mid-section-home {
   text-align: center;
@@ -76,91 +75,61 @@ body {
   @media (max-width: 480px) {
     .mid-section-cover {
       width: 95%; } }
-  .mid-section-cover nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border-bottom: 2px solid var(--primary-text-color); }
-    .mid-section-cover nav h1 {
-      font-size: 40px;
-      flex-grow: 2;
-      text-align: left;
-      margin: 10px; }
-    .mid-section-cover nav ul {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: end;
-      align-items: center;
-      flex-grow: 5; }
-      .mid-section-cover nav ul li {
-        padding: 0 20px;
-        list-style-type: none; }
-        .mid-section-cover nav ul li a {
-          text-decoration: none;
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--primary-text-color); }
+  nav * {
+    margin: 10px; }
+  nav h1 {
+    font-size: 40px; }
+  nav ul {
+    flex-shrink: 1;
+    padding: 0 10px; }
+    nav ul li {
+      padding: 0 10px;
+      display: inline-block; }
+      nav ul li a {
+        text-decoration: none;
+        color: var(--primary-text-color); }
+        nav ul li a:hover {
+          border-bottom: 2px solid var(--primary-text-color);
           color: var(--primary-text-color); }
-          .mid-section-cover nav ul li a:hover {
-            border-bottom: 2px solid var(--primary-text-color);
-            color: var(--primary-text-color); }
-        @media (max-width: 480px) {
-          .mid-section-cover nav ul li {
-            text-align: center;
-            padding: 0 10px; } }
-    @media (max-width: 768px) {
-      .mid-section-cover nav {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; }
-        .mid-section-cover nav ul {
-          justify-content: center; }
-        .mid-section-cover nav h1 {
-          text-align: center; } }
-  .mid-section-cover .sub-mid-section-cover {
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden; }
-    .mid-section-cover .sub-mid-section-cover img {
-      max-width: 100%; }
-    .mid-section-cover .sub-mid-section-cover a {
-      color: var(--primary-text-color); }
+      @media (max-width: 480px) {
+        nav ul li {
+          text-align: center;
+          padding: 0 10px; } }
+  @media (max-width: 480px) {
+    nav {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center; }
+      nav * {
+        flex-basis: 100%; } }
+
+.sub-mid-section-cover {
+  width: 90%;
+  margin: 0 auto; }
+  .sub-mid-section-cover * {
+    max-width: 100%;
+    overflow-x: scroll; }
+  .sub-mid-section-cover a {
+    color: var(--primary-text-color); }
+
+.blog-section-list a {
+  color: var(--primary-text-color); }
+
+.container-404 {
+  text-align: center; }
 
 #themeSelector {
   position: fixed;
   top: 5px;
-  right: 5px;
-  background: var(--primary-background-color);
-  color: var(--primary-text-color);
-  border-radius: 5px;
-  border: 0; }
-
-.post-categories {
-  text-align: right; }
-
-.blog-list {
-  list-style: none;
-  padding-left: 0; }
-  .blog-list li {
-    margin-bottom: 50px; }
-    .blog-list li .excerpt {
-      font-size: 15px; }
-    .blog-list li .blog-heading {
-      font-size: 25px;
-      font-weight: 800; }
-    .blog-list li .date {
-      font-size: 15px;
-      opacity: 0.8;
-      margin-left: 20px; }
-
-.blogPage-categoryList ul {
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 0; }
-  .blogPage-categoryList ul li {
-    margin: 10px 10px; }
-  .blogPage-categoryList ul li:first-child {
-    margin-left: 0; }
+  right: 5px; }
 
 body, html {
   height: 100%;

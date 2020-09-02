@@ -1,4 +1,8 @@
 const themeMap = {
+  'Theme Hacker': {
+    'background-color': '#000000',
+    'text-color': '#00eb00',
+  },
   'Theme Dark': {
     'background-color': '#222',
     'text-color': 'white',
@@ -7,12 +11,7 @@ const themeMap = {
   'Theme Bright': {
     'background-color': 'white',
     'text-color': '#222',
-  },
-  'Theme Hacker': {
-    'background-color': '#000000',
-    'text-color': '#00eb00',
   }
-
 }
 
 
