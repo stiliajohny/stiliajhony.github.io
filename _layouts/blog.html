@@ -1,0 +1,54 @@
+---
+layout: description
+title: Blog
+pagetype: blog
+---
+<!-- This loops through the paginated posts -->
+
+{% if paginator.total_posts == 0 %}
+    <p>No posts right now.</p>
+{% else %}
+<div class="blogPage-categoryList">
+    <ul>
+    <li><a href="{{ "/categories/" | relative_url }}">Categories</a> : </li>
+    {% for category in site.categories %}
+        {% capture category_name %}{{ category | first }}{% endcapture %}
+        <li><a href="{{"/categories/#" | append: category_name | relative_url}}">{{category_name}}</a></li>
+    {% endfor %}
+</ul>
+</div>
+<ul class="blog-list">
+    {% for post in paginator.posts %}
+    <div class="post-preview">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+            <h2 class="post-title">{{ post.title }}</h2>
+        </a>
+        <p class="post-meta">
+            <span>Posted by <b>{{ post.author }}</b> on <b>{{ post.date | date_to_string }}</b>.</span>
+            <br>
+            {% include reading_time.html content=post.content %}
+        </p>
+    </div>
+    <hr>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<hr>
+{% if paginator.total_pages > 1 %}
+<ul>
+
+    {% if paginator.previous_page %}
+        <li>
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+        </li>
+    {% endif %}
+    {% if paginator.next_page %}
+        <li>
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+        </li>
+    {% endif %}
+</ul>
+{% endif %}
+
+

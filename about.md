@@ -18,7 +18,7 @@ Checkout my projects @ [Github](https://github.com/stiliajohny)
 
 ## Skills:
 
-* **Language :** Python C (Arduino), Bash
+* **Language :** Python, C (Arduino), Bash
 * **Devops Stack :** AWS, VMware, pfSense, Zabbix, Grafana, Terraform, Docker/k8s
 * **CI/CD :** Gitlab, Github actions, Jenkins, Concourse
 

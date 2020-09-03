@@ -9,6 +9,7 @@ markdown: kramdown
 theme: dev-portfolio-blog
 resume_url: "Resume.pdf"
 author_name: John Stilia
+
 destination: ./docs
 
 ############################################################
@@ -141,11 +142,11 @@ assets:
 plugins:
   - jekyll-minifier
 
-google_analytics: ''
+google_analytics: 'UA-177229457-1'
 
 # Disqus Comments
 disqus:
-    shortname: 'johnstilia'
+    shortname: stiliajony-github-io
 
 pwa: true
 
