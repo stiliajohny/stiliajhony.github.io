@@ -163,8 +163,8 @@ body {
     margin-left: 0; }
 
 html {
-  --primary-background-color: #000000;
-  --primary-text-color: #00d400; }
+  --primary-background-color: white;
+  --primary-text-color: black; }
 
 body, html {
   height: 100%;
@@ -185,3 +185,7 @@ body, html {
   /* Center and scale the image nicely */
   background-position: center;
   background-size: auto; }
+
+.img-container {
+  text-align: center;
+  display: block; }

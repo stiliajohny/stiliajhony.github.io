@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="dns-prefetch" href="https://stiliajony-github-io.disqus.com">
+    <meta
+    itemprop="description"
+    name="description"
+    content="
+        
+            
+        "
+    />
+    <title>
+      
+          Git Submodules
+      
+    </title>
+    <!-- async load css file -->
+    <link rel="stylesheet" href="/assets/css/styles.css" media="none" onload="if(media!='all')media='all'">
+    <!-- Load css when script is disabled -->
+    <noscript><link rel="stylesheet" href="/assets/css/styles.css"></noscript>
+
+    <!-- Dns Prefetch the google analytics -->
+    <link rel="dns-prefetch" href="www.googletagmanager.com">
+    <link rel="dns-prefetch" href="www.google-analytics.com">
+
+
+
+    <!-- Load the script async and wait for the page to render for script to execute -->
+    <script defer src="/assets/js/theme.js"></script>
+    <script defer src="/assets/js/script.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177229457-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177229457-1');
+</script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link type="application/atom+xml" rel="alternate" href="https://stiliajohny.github.io/feed.xml" title="John Stilia" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Git Submodules | John Stilia</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Git Submodules" />
+<meta name="author" content="John Stilia" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://stiliajohny.github.io/git/submodule/version%20control/2020/09/05/Git-Submodules.html" />
+<meta property="og:url" content="https://stiliajohny.github.io/git/submodule/version%20control/2020/09/05/Git-Submodules.html" />
+<meta property="og:site_name" content="John Stilia" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-05T00:00:00+01:00" />
+<script type="application/ld+json">
+{"headline":"Git Submodules","datePublished":"2020-09-05T00:00:00+01:00","url":"https://stiliajohny.github.io/git/submodule/version%20control/2020/09/05/Git-Submodules.html","dateModified":"2020-09-05T00:00:00+01:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://stiliajohny.github.io/git/submodule/version%20control/2020/09/05/Git-Submodules.html"},"author":{"@type":"Person","name":"John Stilia"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  </head>
+    <body onload="onLoad()">
+      <div class="mid-section-cover">
+    <nav>
+        <h1>John Stilia</h1>
+        <ul>
+      <li>
+        <a href = "/">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href = "/about/">
+          About
+        </a>
+      </li>
+      <li>
+        <a href = "/blog/">
+          Blog
+        </a>
+      </li>
+      <li>
+        <a href = "/Resume.pdf">
+          Resume
+        </a>
+      </li>
+</ul>
+    </nav>
+    <main class="sub-mid-section-cover">
+        <h2>Git Submodules</h2>
+<small></small>
+<p><span class="img-container">
+    <img src="/assets/git-submodule-01.png" />
+</span></p>
+
+<hr />
+
+<p>If you ever used Git submodules you definitely have some scars, missing hair, and long hours of swearing.<br />
+The true is, Git submodules can be tamed with few single commands and gitconfig additions</p>
+
+<p>I’m currently using them for my own project. The basics are not intuitive:</p>
+
+<p>If you are cloning a project with git submodules, you should use <code class="highlighter-rouge">git clone --recursive</code> or <code class="highlighter-rouge">git clone; git submodule init</code><br /><br />
+If you just do a normal git clone the project’s submodules won’t be cloned.
+Submodules are always pinned, there’s no such thing as an unpinned submodule.<br />
+If you make changes in the submodule, you need to <code class="highlighter-rouge">git add path/to/submodule; git commit</code>. <br /></p>
+
+<p>To make life a bit easier, you could amend your gitconfig located at <code class="highlighter-rouge">~/.gitconfig</code> with the following.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [pull]
+         recurseSubmodules = true
+         initSubmodules = true
+ [checkout]
+         recurseSubmodules = true
+         initSubmodules = true
+ [alias]
+         up = pull --recurse-submodules
+         co = checkout --recurse-submodules
+</code></pre></div></div>
+
+<hr />
+<h2 id="git-submodule-cheatsheet">Git Submodule Cheatsheet</h2>
+
+<h4 id="create-a-submodule-in-a-currently-existing-reposummary">Create a submodule in a currently existing repo&lt;/summary&gt;</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git submodule add URL PATH
+ git submodule update --init # Adding --recursive here will also update the submodule's submodule  if it exists
+ git commit -m 'Added new submodule NAME at PATH'
+</code></pre></div></div>
+
+<h3 id="update-the-path-of-the-submodulesummary">Update the path of the submodule&lt;/summary&gt;</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git submodule init
+ git mv oldpath/submodule newpathsubmodule
+ git submodule update
+</code></pre></div></div>
+
+<h4 id="check-submodules-status">Check Submodules status</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ git submodule status
+ 03608115df2071fff4eaaff1605768c275e5f81f bats (v0.4.0-6-g0360811)
+ 9f88b4207da750093baabc4e3f41bf68f0dd3630 t/test_helper/bats-assert (v0.2.0-5-g9f88b42)
+ d0a131831c487a1f1141e76d3ab386c89642cdff t/test_helper/bats-support (v0.2.0)
+</code></pre></div></div>
+
+<h4 id="pull-a-submodule-after-cloning-a-repositorysummary">Pull a submodule after cloning a repository&lt;/summary&gt;</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # Your repository will have .gitmodules file
+ cd ~/repository
+ git submodule update --init # Adding --recursive here will also update the submodule's submodule  if it exists
+</code></pre></div></div>
+
+
+
+<div class="post-categories">
+   --
+  Categories :
+  
+  
+      <a href="https://stiliajohny.github.io/categories/#git">git</a>
+  &nbsp;
+  
+      <a href="https://stiliajohny.github.io/categories/#submodule">submodule</a>
+  &nbsp;
+  
+      <a href="https://stiliajohny.github.io/categories/#version control">version control</a>
+  
+  
+
+
+</div>
+
+
+  <hr>
+  <div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    this.page.url = 'https://stiliajohny.github.io/git/submodule/version%20control/2020/09/05/Git-Submodules.html';
+    this.page.identifier = 'https://stiliajohny.github.io/git/submodule/version%20control/2020/09/05/Git-Submodules.html';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://stiliajony-github-io.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </main>
+</div>
+
+    </body>
+</html>

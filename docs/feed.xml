@@ -1,1 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://stiliajohny.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://stiliajohny.github.io/" rel="alternate" type="text/html" /><updated>2020-09-03T23:47:59+01:00</updated><id>https://stiliajohny.github.io/feed.xml</id><title type="html">John Stilia</title><entry><title type="html">Hello World</title><link href="https://stiliajohny.github.io/init/2020/08/10/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2020-08-10T00:00:00+01:00</published><updated>2020-08-10T00:00:00+01:00</updated><id>https://stiliajohny.github.io/init/2020/08/10/Hello-World</id><content type="html" xml:base="https://stiliajohny.github.io/init/2020/08/10/Hello-World.html">&lt;h1 id=&quot;hello-world&quot;&gt;Hello World&lt;/h1&gt;</content><author><name></name></author><category term="init" /><summary type="html">Hello World</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://stiliajohny.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://stiliajohny.github.io/" rel="alternate" type="text/html" /><updated>2020-09-05T23:47:45+01:00</updated><id>https://stiliajohny.github.io/feed.xml</id><title type="html">John Stilia</title><entry><title type="html">Git Submodules</title><link href="https://stiliajohny.github.io/git/submodule/version%20control/2020/09/05/Git-Submodules.html" rel="alternate" type="text/html" title="Git Submodules" /><published>2020-09-05T00:00:00+01:00</published><updated>2020-09-05T00:00:00+01:00</updated><id>https://stiliajohny.github.io/git/submodule/version%20control/2020/09/05/Git-Submodules</id><content type="html" xml:base="https://stiliajohny.github.io/git/submodule/version%20control/2020/09/05/Git-Submodules.html">&lt;p&gt;&lt;span class=&quot;img-container&quot;&gt;
+    &lt;img src=&quot;/assets/git-submodule-01.png&quot; /&gt;
+&lt;/span&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;If you ever used Git submodules you definitely have some scars, missing hair, and long hours of swearing.&lt;br /&gt;
+The true is, Git submodules can be tamed with few single commands and gitconfig additions&lt;/p&gt;
+
+&lt;p&gt;I’m currently using them for my own project. The basics are not intuitive:&lt;/p&gt;
+
+&lt;p&gt;If you are cloning a project with git submodules, you should use &lt;code class=&quot;highlighter-rouge&quot;&gt;git clone --recursive&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;git clone; git submodule init&lt;/code&gt;&lt;br /&gt;&lt;br /&gt;
+If you just do a normal git clone the project’s submodules won’t be cloned.
+Submodules are always pinned, there’s no such thing as an unpinned submodule.&lt;br /&gt;
+If you make changes in the submodule, you need to &lt;code class=&quot;highlighter-rouge&quot;&gt;git add path/to/submodule; git commit&lt;/code&gt;. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;To make life a bit easier, you could amend your gitconfig located at &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.gitconfig&lt;/code&gt; with the following.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; [pull]
+         recurseSubmodules = true
+         initSubmodules = true
+ [checkout]
+         recurseSubmodules = true
+         initSubmodules = true
+ [alias]
+         up = pull --recurse-submodules
+         co = checkout --recurse-submodules
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;git-submodule-cheatsheet&quot;&gt;Git Submodule Cheatsheet&lt;/h2&gt;
+
+&lt;h4 id=&quot;create-a-submodule-in-a-currently-existing-reposummary&quot;&gt;Create a submodule in a currently existing repo&amp;lt;/summary&amp;gt;&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; git submodule add URL PATH
+ git submodule update --init # Adding --recursive here will also update the submodule's submodule  if it exists
+ git commit -m 'Added new submodule NAME at PATH'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;update-the-path-of-the-submodulesummary&quot;&gt;Update the path of the submodule&amp;lt;/summary&amp;gt;&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; git submodule init
+ git mv oldpath/submodule newpathsubmodule
+ git submodule update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;check-submodules-status&quot;&gt;Check Submodules status&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ git submodule status
+ 03608115df2071fff4eaaff1605768c275e5f81f bats (v0.4.0-6-g0360811)
+ 9f88b4207da750093baabc4e3f41bf68f0dd3630 t/test_helper/bats-assert (v0.2.0-5-g9f88b42)
+ d0a131831c487a1f1141e76d3ab386c89642cdff t/test_helper/bats-support (v0.2.0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;pull-a-submodule-after-cloning-a-repositorysummary&quot;&gt;Pull a submodule after cloning a repository&amp;lt;/summary&amp;gt;&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; # Your repository will have .gitmodules file
+ cd ~/repository
+ git submodule update --init # Adding --recursive here will also update the submodule's submodule  if it exists
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>John Stilia</name></author><category term="git" /><category term="submodule" /><category term="version control" /><summary type="html"></summary></entry><entry><title type="html">Hello World</title><link href="https://stiliajohny.github.io/init/2020/08/10/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2020-08-10T00:00:00+01:00</published><updated>2020-08-10T00:00:00+01:00</updated><id>https://stiliajohny.github.io/init/2020/08/10/Hello-World</id><content type="html" xml:base="https://stiliajohny.github.io/init/2020/08/10/Hello-World.html">&lt;h1 id=&quot;hello-world&quot;&gt;Hello World&lt;/h1&gt;</content><author><name>John Stilia</name></author><category term="init" /><summary type="html">Hello World</summary></entry></feed>
