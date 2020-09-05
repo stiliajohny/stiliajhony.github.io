@@ -2,38 +2,35 @@
 ---
 @import "main";
 
-
-
 html {
-
-  --primary-background-color: #000000;
-  --primary-text-color: #00d400;
-
+  --primary-background-color: white;
+  --primary-text-color: black;
 }
 
 body, html {
     height: 100%;
     font: 15px Courier, sans-serif;
-  }
+}
 
-  * {
-    box-sizing: border-box;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  .bg-image {
-    /* The image used */
-    background-image: url("back.svg");
-    background-repeat: repeat;
+.bg-image {
+  /* The image used */
+  background-image: url("back.svg");
+  background-repeat: repeat;
+  /* Add the blur effect */
+  filter: blur(2px);
+  -webkit-filter: blur(12px);
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-size: auto;
+}
 
-    /* Add the blur effect */
-    filter: blur(2px);
-    -webkit-filter: blur(12px);
-
-    /* Full height */
-    height: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-size: auto;
-
-  }
+.img-container {
+  text-align: center;
+  display: block;
+}

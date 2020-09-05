@@ -8,11 +8,11 @@ Hi, I am John Stilia.
 
 Currently working in a DevSecOps position in which I am primarily getting involved with infrastructure and security.
 I have a huge interest in security and development methodology, with a particular interest on mutable infrastructure.
-On my free time I am getting involved with Python development, Docker and k8s as well as learning new ethical hacking techniques  on different topics.
+On my free time I am getting involved with Python development, Docker and k8s as well as learning new ethical hacking techniques on different topics.
 
 Further, I am an Arch-Vim-Tmux user, which I can definitely talk hours about. Supporting Open Source since 2006 has changed the way I collaborate and interact with like-minded people.
 
-Checkout my projects @ [Github](https://github.com/stiliajohny)
+Checkout my projects @[Github](https://github.com/stiliajohny)
 
 
 
