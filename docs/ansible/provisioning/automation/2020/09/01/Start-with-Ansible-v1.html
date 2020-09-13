@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="dns-prefetch" href="https://stiliajony-github-io.disqus.com">
+    <meta
+    itemprop="description"
+    name="description"
+    content="
+        
+            
+        "
+    />
+    <title>
+      
+          Start with Ansible v1
+      
+    </title>
+    <!-- async load css file -->
+    <link rel="stylesheet" href="/assets/css/styles.css" media="none" onload="if(media!='all')media='all'">
+    <!-- Load css when script is disabled -->
+    <noscript><link rel="stylesheet" href="/assets/css/styles.css"></noscript>
+
+    <!-- Dns Prefetch the google analytics -->
+    <link rel="dns-prefetch" href="www.googletagmanager.com">
+    <link rel="dns-prefetch" href="www.google-analytics.com">
+
+
+
+    <!-- Load the script async and wait for the page to render for script to execute -->
+    <script defer src="/assets/js/theme.js"></script>
+    <script defer src="/assets/js/script.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177229457-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177229457-1');
+</script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link type="application/atom+xml" rel="alternate" href="https://stiliajohny.github.io/feed.xml" title="John Stilia" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Start with Ansible v1 | John Stilia</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Start with Ansible v1" />
+<meta name="author" content="John Stilia" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://stiliajohny.github.io/ansible/provisioning/automation/2020/09/01/Start-with-Ansible-v1.html" />
+<meta property="og:url" content="https://stiliajohny.github.io/ansible/provisioning/automation/2020/09/01/Start-with-Ansible-v1.html" />
+<meta property="og:site_name" content="John Stilia" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-01T00:00:00+01:00" />
+<script type="application/ld+json">
+{"headline":"Start with Ansible v1","datePublished":"2020-09-01T00:00:00+01:00","url":"https://stiliajohny.github.io/ansible/provisioning/automation/2020/09/01/Start-with-Ansible-v1.html","dateModified":"2020-09-01T00:00:00+01:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://stiliajohny.github.io/ansible/provisioning/automation/2020/09/01/Start-with-Ansible-v1.html"},"author":{"@type":"Person","name":"John Stilia"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  </head>
+    <body onload="onLoad()">
+      <div class="mid-section-cover">
+    <nav>
+        <h1>John Stilia</h1>
+        <ul>
+      <li>
+        <a href = "/">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href = "/about/">
+          About
+        </a>
+      </li>
+      <li>
+        <a href = "/blog/">
+          Blog
+        </a>
+      </li>
+      <li>
+        <a href = "/Resume.pdf">
+          Resume
+        </a>
+      </li>
+</ul>
+    </nav>
+    <main class="sub-mid-section-cover">
+        <h2>Start with Ansible v1</h2>
+<small></small>
+<p><span class="img-container">
+    <img src="/assets/Start-with-Ansible-01.png" />
+</span></p>
+
+<p>There must be times that you are unhappy and having enough of doing the same task on multiple machines.<br />
+There must be times that you are upset of the same task having multiple steps and complex playbooks to follow.<br />
+Finding your self in the Abyss of software installation and configurations that have dependencies on other steps not documented?</p>
+
+<p>There is a solution, use Ansible.</p>
+
+<p>Ansible is a simple to use Configuration Management tool that is based on yaml ( or json ) playbooks. Ansible is using normal SSH access to execute the pre-configured steps and it can follow dependencies and playbooks to your liking.</p>
+
+<p>Using Ansible at first might be complicated but rest assured after few hours you will be writing your own playbooks abd complex configurations.</p>
+
+<p>Lets dive in.</p>
+
+<hr />
+
+<p>To begging lets install Ansible on our operating system, detailed instructions can be found <a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html">here</a>.
+My chosen way to install Ansible is by using  <strong>python</strong>.</p>
+
+<h3 id="install-pip">Install PIP</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+$ python get-pip.py --user
+</code></pre></div></div>
+<h3 id="install-anible-on-user-space">Install anible on user space</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pip install --user ansible
+</code></pre></div></div>
+
+<hr />
+
+<p>Ok, and now what?</p>
+
+<p>Lets do some simple tasks with Ansible</p>
+
+
+
+<div class="post-categories">
+   --
+  Categories :
+  
+  
+      <a href="https://stiliajohny.github.io/categories/#ansible">ansible</a>
+  &nbsp;
+  
+      <a href="https://stiliajohny.github.io/categories/#provisioning">provisioning</a>
+  &nbsp;
+  
+      <a href="https://stiliajohny.github.io/categories/#automation">automation</a>
+  
+  
+
+
+</div>
+
+
+  <hr>
+  <div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    this.page.url = 'https://stiliajohny.github.io/ansible/provisioning/automation/2020/09/01/Start-with-Ansible-v1.html';
+    this.page.identifier = 'https://stiliajohny.github.io/ansible/provisioning/automation/2020/09/01/Start-with-Ansible-v1.html';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://stiliajony-github-io.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </main>
+</div>
+
+    </body>
+</html>

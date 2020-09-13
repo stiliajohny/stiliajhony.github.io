@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="dns-prefetch" href="https://stiliajony-github-io.disqus.com">
+    <meta
+    itemprop="description"
+    name="description"
+    content="
+        
+            
+        "
+    />
+    <title>
+      
+          Start with Concourse v.1
+      
+    </title>
+    <!-- async load css file -->
+    <link rel="stylesheet" href="/assets/css/styles.css" media="none" onload="if(media!='all')media='all'">
+    <!-- Load css when script is disabled -->
+    <noscript><link rel="stylesheet" href="/assets/css/styles.css"></noscript>
+
+    <!-- Dns Prefetch the google analytics -->
+    <link rel="dns-prefetch" href="www.googletagmanager.com">
+    <link rel="dns-prefetch" href="www.google-analytics.com">
+
+
+
+    <!-- Load the script async and wait for the page to render for script to execute -->
+    <script defer src="/assets/js/theme.js"></script>
+    <script defer src="/assets/js/script.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177229457-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177229457-1');
+</script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link type="application/atom+xml" rel="alternate" href="https://stiliajohny.github.io/feed.xml" title="John Stilia" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Start with Concourse v.1 | John Stilia</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Start with Concourse v.1" />
+<meta name="author" content="John Stilia" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://stiliajohny.github.io/cicd/automation/pipelines/devops/2020/09/01/Start-with-Concourse-01.html" />
+<meta property="og:url" content="https://stiliajohny.github.io/cicd/automation/pipelines/devops/2020/09/01/Start-with-Concourse-01.html" />
+<meta property="og:site_name" content="John Stilia" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-01T00:00:00+01:00" />
+<script type="application/ld+json">
+{"headline":"Start with Concourse v.1","datePublished":"2020-09-01T00:00:00+01:00","url":"https://stiliajohny.github.io/cicd/automation/pipelines/devops/2020/09/01/Start-with-Concourse-01.html","dateModified":"2020-09-01T00:00:00+01:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://stiliajohny.github.io/cicd/automation/pipelines/devops/2020/09/01/Start-with-Concourse-01.html"},"author":{"@type":"Person","name":"John Stilia"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  </head>
+    <body onload="onLoad()">
+      <div class="mid-section-cover">
+    <nav>
+        <h1>John Stilia</h1>
+        <ul>
+      <li>
+        <a href = "/">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href = "/about/">
+          About
+        </a>
+      </li>
+      <li>
+        <a href = "/blog/">
+          Blog
+        </a>
+      </li>
+      <li>
+        <a href = "/Resume.pdf">
+          Resume
+        </a>
+      </li>
+</ul>
+    </nav>
+    <main class="sub-mid-section-cover">
+        <h2>Start with Concourse v.1</h2>
+<small></small>
+<p><span class="img-container">
+    <img src="/assets/Start-with-Concouse-01/Start-with-Concouse-01.png" />
+</span></p>
+
+<hr />
+
+<p>You might be working on a DevOps environment/position or myu might simply like automation.
+Usually there are fwe known solutions out there that are in the market for long ( see Jenkins, Gitlab, Cronjobs :) etc )</p>
+
+<p>Reading this article you wil find that concourse is one ( if not the only one ) solution for CICD that its secure, Devops and Dev friendly, requires minimum effort to configure ( at least for basic use ) and after all it is extremely simple to write as the configs are based on the beloved YAML syntax.</p>
+
+<hr />
+
+<p>Let’s now have a look to see ho we can deploy concourse and play around with some of the basic functionality.</p>
+
+<p>In a nutshell, we will:</p>
+<ul>
+  <li><a href="#Instalation">Install Concourse with docker on our environment</a></li>
+  <li><a href="#FlyTool">Look into the <code class="highlighter-rouge">fly</code> cli tool.</a></li>
+  <li><a href="#WebFrontend">Look on the web frontend</a></li>
+  <li><a href="#Buildapipeline">Build a very basic pipeline</a></li>
+</ul>
+
+<hr />
+
+<h2 id="---install-concourse-with-docker"><a name="Instalation"></a>  <img src="https://simpleicons.org/icons/concourse.svg" width="3%" /> Install Concourse with docker</h2>
+
+<ul>
+  <li>Clone the repo <a href="https://github.com/concourse/concourse-docker">concourse/concourse-docker</a></li>
+  <li>Prepare the concourse environment with some settings
+    <ul>
+      <li>Create the necessary credentials to authorize concourse components with each other
+        <ul>
+          <li>Run <code class="highlighter-rouge">./keys/generate</code></li>
+        </ul>
+      </li>
+      <li>Edit the <code class="highlighter-rouge">docker-compose.yml</code> and replace the port <code class="highlighter-rouge">8080:8080</code> with <code class="highlighter-rouge">xxxx:8080</code>, <code class="highlighter-rouge">xxxx</code> being the port of your preference.</li>
+    </ul>
+  </li>
+  <li>Start the concourse containers with <code class="highlighter-rouge">docker-compose up</code>
+    <ul>
+      <li>This will start:
+        <ul>
+          <li>A Database ( postgress in this case )</li>
+          <li>A Web Frontend ( accessible on 127.0.0.1:xxxx, <code class="highlighter-rouge">xxxx</code> being the port configured on previous step )</li>
+          <li>A Worker, responsible to run all the tasks from the pipelines</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Default credentials are <code class="highlighter-rouge">test:test</code></strong></p>
+
+<h2 id="-fly-cli-tool"><a name="FlyTool"></a><img src="https://simpleicons.org/icons/concourse.svg" width="3%" /> Fly cli tool</h2>
+<p>Depends the OS you will need to use your package manager to install the fly tool.<br />
+An easy way to get the fly tool is from here:</p>
+
+<p><code class="highlighter-rouge">curl -LO https://github.com/concourse/concourse/releases/download/v3.3.2/fly_linux_amd64</code><br />
+<code class="highlighter-rouge">sudo mv ./fly_linux_amd64 /usr/local/bin/fly</code><br />
+<code class="highlighter-rouge">sudo chmod +x /usr/local/bin/fly</code></p>
+
+<p>The <code class="highlighter-rouge">fly</code> cli tool is the tool used to control and manipulate concourse on it’s entirety.<br />
+On the one of the next articles about concourse we will look more in depth on how to use this tool and a nice cheat-sheet to have around.</p>
+
+<ul>
+  <li>Logging in to Concourse with fly:
+    <ul>
+      <li><code class="highlighter-rouge">fly --target test login --team-name main --concourse-url localhost:8080</code>
+        <ul>
+          <li><code class="highlighter-rouge">--target</code> is used to name the current configuration</li>
+          <li><code class="highlighter-rouge">--team-name</code> is used to login to the default <strong>main</strong> team</li>
+          <li><code class="highlighter-rouge">--concourse-url</code> is used to connect ot the url your concourse is running</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="--web-frontend"><a name="WebFrontend"></a><img src="https://simpleicons.org/icons/concourse.svg" width="3%" />  Web Frontend</h2>
+
+<details>
+    <summary>Web frontend screenshot </summary>
+<img src="/assets/Start-with-Concouse-01/Start-with-Concouse-01-screen1.png" width="40%" />
+</details>
+<p>Navigate to <a href="http://localhost:8080">http://localhost:8080</a> in order to see the the web frontend.<br />
+As mentioned before, use the username and password test.<br /></p>
+
+<h4 id="-what-can-we-do-on-the-front-end"><a name="WebFrontend"></a><img src="https://simpleicons.org/icons/concourse.svg" width="1%" /> What can we do on the front end?</h4>
+
+<p>With Concourse frontend we can primarily visualize the pipelines. <br />
+We can see the status, state, progress, dependencies between stages.
+A great addition to this frond end is the ability to see pipelines run by different teams ( based on the way someone logged-in )</p>
+<details>
+    <summary>Pipeline screenshot </summary>
+<img src="/assets/Start-with-Concouse-01/Start-with-Concouse-01-screen2.png" width="400px" height="200px" />
+<img src="/assets/Start-with-Concouse-01/Start-with-Concouse-01-screen3.png" width="400px" height="200px" />
+<img src="/assets/Start-with-Concouse-01/Start-with-Concouse-01-screen4.png" width="400px" height="200px" />
+<img src="/assets/Start-with-Concouse-01/Start-with-Concouse-01-screen5.png" width="400px" height="200px" />
+</details>
+
+<h2 id="--build-a-pipeline"><a name="Buildapipeline"></a><img src="https://simpleicons.org/icons/concourse.svg" width="3%" />  Build a Pipeline</h2>
+
+<p>In order to build a pipeline we will need 3 steps</p>
+
+<ul>
+  <li>Write the YAML</li>
+  <li>Push the YAML on concourse</li>
+  <li>See the pipeline from frontend</li>
+</ul>
+
+<h4 id="-write-the-yaml"><img src="https://simpleicons.org/icons/concourse.svg" width="1%" /> Write the YAML</h4>
+
+<p>Open your favorite editor and create a file <code class="highlighter-rouge">pipeline.yml</code>
+Then paste the following text</p>
+<details>
+    <summary>YAML Code </summary>
+    <pre>
+---
+jobs:
+  - name: job
+    public: true
+    plan:
+      - task: simple-task
+        config:
+          platform: linux
+          image_resource:
+            type: registry-image
+            source: { repository: busybox }
+          run:
+            path: echo
+            args: ["Hello, world!"]
+</pre>
+</details>
+
+<h4 id="-push-the-yaml-to-the-concourse-server"><a name="WebFrontend"></a><img src="https://simpleicons.org/icons/concourse.svg" width="1%" /> Push the YAML to the concourse server</h4>
+
+<p>Here we ae going to use the <strong>fly</strong> cli tool. Open A terminal and paste the following<br />
+  <code class="highlighter-rouge">fly -t test set-pipeline --pipeline my-pipeline --config pipeline.yml</code></p>
+
+<p>At this stage <strong>fly</strong> will give you a diff of the code it will send on the concourse server for you to check.<br />
+After accepting the diff, <strong>fly</strong> will push the code to the frontend and a worker will pick it up and execute it.<br />
+In this case the pipeline will start in a <strong>pause</strong> state. so we have the opportunity to manually start it.</p>
+
+<p>Let’s got to the <a href="http://localhost:8080">frontend</a> and review the pipeline.</p>
+
+<details>
+    <summary>Pipeline screenshot</summary>
+<img src="/assets/Start-with-Concouse-01/Start-with-Concouse-01-screen6.png" width="400px" height="400px" />
+<img src="/assets/Start-with-Concouse-01/Start-with-Concouse-01-screen7.png" width="400px" height="400px" />
+<img src="/assets/Start-with-Concouse-01/Start-with-Concouse-01-screen8.png" width="400px" height="400px" />
+<img src="/assets/Start-with-Concouse-01/Start-with-Concouse-01-screen9.png" width="400px" height="400px" />
+</details>
+
+
+
+<div class="post-categories">
+   --
+  Categories :
+  
+  
+      <a href="https://stiliajohny.github.io/categories/#CICD">CICD</a>
+  &nbsp;
+  
+      <a href="https://stiliajohny.github.io/categories/#Automation">Automation</a>
+  &nbsp;
+  
+      <a href="https://stiliajohny.github.io/categories/#Pipelines">Pipelines</a>
+  &nbsp;
+  
+      <a href="https://stiliajohny.github.io/categories/#Devops">Devops</a>
+  
+  
+
+
+</div>
+
+
+  <hr>
+  <div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    this.page.url = 'https://stiliajohny.github.io/cicd/automation/pipelines/devops/2020/09/01/Start-with-Concourse-01.html';
+    this.page.identifier = 'https://stiliajohny.github.io/cicd/automation/pipelines/devops/2020/09/01/Start-with-Concourse-01.html';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://stiliajony-github-io.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </main>
+</div>
+
+    </body>
+</html>

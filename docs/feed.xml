@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://stiliajohny.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://stiliajohny.github.io/" rel="alternate" type="text/html" /><updated>2020-09-05T23:47:45+01:00</updated><id>https://stiliajohny.github.io/feed.xml</id><title type="html">John Stilia</title><entry><title type="html">Git Submodules</title><link href="https://stiliajohny.github.io/git/submodule/version%20control/2020/09/05/Git-Submodules.html" rel="alternate" type="text/html" title="Git Submodules" /><published>2020-09-05T00:00:00+01:00</published><updated>2020-09-05T00:00:00+01:00</updated><id>https://stiliajohny.github.io/git/submodule/version%20control/2020/09/05/Git-Submodules</id><content type="html" xml:base="https://stiliajohny.github.io/git/submodule/version%20control/2020/09/05/Git-Submodules.html">&lt;p&gt;&lt;span class=&quot;img-container&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://stiliajohny.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://stiliajohny.github.io/" rel="alternate" type="text/html" /><updated>2020-09-13T18:18:29+01:00</updated><id>https://stiliajohny.github.io/feed.xml</id><title type="html">John Stilia</title><entry><title type="html">Git Submodules</title><link href="https://stiliajohny.github.io/git/submodule/version%20control/2020/09/05/Git-Submodules.html" rel="alternate" type="text/html" title="Git Submodules" /><published>2020-09-05T00:00:00+01:00</published><updated>2020-09-05T00:00:00+01:00</updated><id>https://stiliajohny.github.io/git/submodule/version%20control/2020/09/05/Git-Submodules</id><content type="html" xml:base="https://stiliajohny.github.io/git/submodule/version%20control/2020/09/05/Git-Submodules.html">&lt;p&gt;&lt;span class=&quot;img-container&quot;&gt;
     &lt;img src=&quot;/assets/git-submodule-01.png&quot; /&gt;
 &lt;/span&gt;&lt;/p&gt;
 
@@ -27,7 +27,7 @@ If you make changes in the submodule, you need to &lt;code class=&quot;highlight
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
-&lt;h2 id=&quot;git-submodule-cheatsheet&quot;&gt;Git Submodule Cheatsheet&lt;/h2&gt;
+&lt;h2 id=&quot;--git-submodule-cheatsheet&quot;&gt;&lt;img src=&quot;https://simpleicons.org/icons/git.svg&quot; width=&quot;3%&quot; /&gt;  Git Submodule Cheatsheet&lt;/h2&gt;
 
 &lt;h4 id=&quot;create-a-submodule-in-a-currently-existing-reposummary&quot;&gt;Create a submodule in a currently existing repo&amp;lt;/summary&amp;gt;&lt;/h4&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; git submodule add URL PATH
@@ -52,4 +52,215 @@ If you make changes in the submodule, you need to &lt;code class=&quot;highlight
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; # Your repository will have .gitmodules file
  cd ~/repository
  git submodule update --init # Adding --recursive here will also update the submodule's submodule  if it exists
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>John Stilia</name></author><category term="git" /><category term="submodule" /><category term="version control" /><summary type="html"></summary></entry><entry><title type="html">Hello World</title><link href="https://stiliajohny.github.io/init/2020/08/10/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2020-08-10T00:00:00+01:00</published><updated>2020-08-10T00:00:00+01:00</updated><id>https://stiliajohny.github.io/init/2020/08/10/Hello-World</id><content type="html" xml:base="https://stiliajohny.github.io/init/2020/08/10/Hello-World.html">&lt;h1 id=&quot;hello-world&quot;&gt;Hello World&lt;/h1&gt;</content><author><name>John Stilia</name></author><category term="init" /><summary type="html">Hello World</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>John Stilia</name></author><category term="git" /><category term="submodule" /><category term="version control" /><summary type="html"></summary></entry><entry><title type="html">Droid Hunter</title><link href="https://stiliajohny.github.io/android/tool/vulnerability/2020/09/01/Droid-Hunter.html" rel="alternate" type="text/html" title="Droid Hunter" /><published>2020-09-01T00:00:00+01:00</published><updated>2020-09-01T00:00:00+01:00</updated><id>https://stiliajohny.github.io/android/tool/vulnerability/2020/09/01/Droid-Hunter</id><content type="html" xml:base="https://stiliajohny.github.io/android/tool/vulnerability/2020/09/01/Droid-Hunter.html">&lt;p&gt;&lt;span class=&quot;img-container&quot;&gt;
+    &lt;img src=&quot;/assets/Droid-Hunter-01.png&quot; /&gt;
+&lt;/span&gt;&lt;/p&gt;</content><author><name>John Stilia</name></author><category term="android" /><category term="tool" /><category term="vulnerability" /><summary type="html"></summary></entry><entry><title type="html">MAC Address Change</title><link href="https://stiliajohny.github.io/mac%20address/2020/09/01/MAC-Address-Change.html" rel="alternate" type="text/html" title="MAC Address Change" /><published>2020-09-01T00:00:00+01:00</published><updated>2020-09-01T00:00:00+01:00</updated><id>https://stiliajohny.github.io/mac%20address/2020/09/01/MAC-Address-Change</id><content type="html" xml:base="https://stiliajohny.github.io/mac%20address/2020/09/01/MAC-Address-Change.html">&lt;p&gt;&lt;span class=&quot;img-container&quot;&gt;
+    &lt;img src=&quot;/assets/mac-address-change-01.png&quot; /&gt;
+&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;There are times you need to change the MAC address to emulate another device or just get free Airport WiFi.
+You may have few reasons.Maybe you want to hide your actual MAC address (also called physical address). &lt;br /&gt;
+Other case can be that the network administrator might have blocked a particular MAC address in the router or firewall.&lt;/p&gt;
+
+&lt;p&gt;One great ‘benefit’ is that some public network (like Airport WiFi) allows free internet for a limited time. &lt;br /&gt;
+If you want to use the internet after this limit, you just nee to trick the network believing tat you are a new device. It’s a famous meme as well.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Lets get straight into it.&lt;/p&gt;
+
+&lt;p&gt;First we need to find the interface you want to spoof the MAC address ( usually this is a wireless interfac  ).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Open a terminal and look for wireless interface name
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ip link show&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>John Stilia</name></author><category term="MAC address" /><summary type="html"></summary></entry><entry><title type="html">Start with Ansible v1</title><link href="https://stiliajohny.github.io/ansible/provisioning/automation/2020/09/01/Start-with-Ansible-v1.html" rel="alternate" type="text/html" title="Start with Ansible v1" /><published>2020-09-01T00:00:00+01:00</published><updated>2020-09-01T00:00:00+01:00</updated><id>https://stiliajohny.github.io/ansible/provisioning/automation/2020/09/01/Start-with-Ansible-v1</id><content type="html" xml:base="https://stiliajohny.github.io/ansible/provisioning/automation/2020/09/01/Start-with-Ansible-v1.html">&lt;p&gt;&lt;span class=&quot;img-container&quot;&gt;
+    &lt;img src=&quot;/assets/Start-with-Ansible-01.png&quot; /&gt;
+&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;There must be times that you are unhappy and having enough of doing the same task on multiple machines.&lt;br /&gt;
+There must be times that you are upset of the same task having multiple steps and complex playbooks to follow.&lt;br /&gt;
+Finding your self in the Abyss of software installation and configurations that have dependencies on other steps not documented?&lt;/p&gt;
+
+&lt;p&gt;There is a solution, use Ansible.&lt;/p&gt;
+
+&lt;p&gt;Ansible is a simple to use Configuration Management tool that is based on yaml ( or json ) playbooks. Ansible is using normal SSH access to execute the pre-configured steps and it can follow dependencies and playbooks to your liking.&lt;/p&gt;
+
+&lt;p&gt;Using Ansible at first might be complicated but rest assured after few hours you will be writing your own playbooks abd complex configurations.&lt;/p&gt;
+
+&lt;p&gt;Lets dive in.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;To begging lets install Ansible on our operating system, detailed instructions can be found &lt;a href=&quot;https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html&quot;&gt;here&lt;/a&gt;.
+My chosen way to install Ansible is by using  &lt;strong&gt;python&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;install-pip&quot;&gt;Install PIP&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+$ python get-pip.py --user
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;install-anible-on-user-space&quot;&gt;Install anible on user space&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip install --user ansible
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Ok, and now what?&lt;/p&gt;
+
+&lt;p&gt;Lets do some simple tasks with Ansible&lt;/p&gt;</content><author><name>John Stilia</name></author><category term="ansible" /><category term="provisioning" /><category term="automation" /><summary type="html"></summary></entry><entry><title type="html">Start with Concourse v.1</title><link href="https://stiliajohny.github.io/cicd/automation/pipelines/devops/2020/09/01/Start-with-Concourse-01.html" rel="alternate" type="text/html" title="Start with Concourse v.1" /><published>2020-09-01T00:00:00+01:00</published><updated>2020-09-01T00:00:00+01:00</updated><id>https://stiliajohny.github.io/cicd/automation/pipelines/devops/2020/09/01/Start-with-Concourse-01</id><content type="html" xml:base="https://stiliajohny.github.io/cicd/automation/pipelines/devops/2020/09/01/Start-with-Concourse-01.html">&lt;p&gt;&lt;span class=&quot;img-container&quot;&gt;
+    &lt;img src=&quot;/assets/Start-with-Concouse-01/Start-with-Concouse-01.png&quot; /&gt;
+&lt;/span&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;You might be working on a DevOps environment/position or myu might simply like automation.
+Usually there are fwe known solutions out there that are in the market for long ( see Jenkins, Gitlab, Cronjobs :) etc )&lt;/p&gt;
+
+&lt;p&gt;Reading this article you wil find that concourse is one ( if not the only one ) solution for CICD that its secure, Devops and Dev friendly, requires minimum effort to configure ( at least for basic use ) and after all it is extremely simple to write as the configs are based on the beloved YAML syntax.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Let’s now have a look to see ho we can deploy concourse and play around with some of the basic functionality.&lt;/p&gt;
+
+&lt;p&gt;In a nutshell, we will:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#Instalation&quot;&gt;Install Concourse with docker on our environment&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#FlyTool&quot;&gt;Look into the &lt;code class=&quot;highlighter-rouge&quot;&gt;fly&lt;/code&gt; cli tool.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#WebFrontend&quot;&gt;Look on the web frontend&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Buildapipeline&quot;&gt;Build a very basic pipeline&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;---install-concourse-with-docker&quot;&gt;&lt;a name=&quot;Instalation&quot;&gt;&lt;/a&gt;  &lt;img src=&quot;https://simpleicons.org/icons/concourse.svg&quot; width=&quot;3%&quot; /&gt; Install Concourse with docker&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clone the repo &lt;a href=&quot;https://github.com/concourse/concourse-docker&quot;&gt;concourse/concourse-docker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Prepare the concourse environment with some settings
+    &lt;ul&gt;
+      &lt;li&gt;Create the necessary credentials to authorize concourse components with each other
+        &lt;ul&gt;
+          &lt;li&gt;Run &lt;code class=&quot;highlighter-rouge&quot;&gt;./keys/generate&lt;/code&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Edit the &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; and replace the port &lt;code class=&quot;highlighter-rouge&quot;&gt;8080:8080&lt;/code&gt; with &lt;code class=&quot;highlighter-rouge&quot;&gt;xxxx:8080&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;xxxx&lt;/code&gt; being the port of your preference.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Start the concourse containers with &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose up&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;This will start:
+        &lt;ul&gt;
+          &lt;li&gt;A Database ( postgress in this case )&lt;/li&gt;
+          &lt;li&gt;A Web Frontend ( accessible on 127.0.0.1:xxxx, &lt;code class=&quot;highlighter-rouge&quot;&gt;xxxx&lt;/code&gt; being the port configured on previous step )&lt;/li&gt;
+          &lt;li&gt;A Worker, responsible to run all the tasks from the pipelines&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Default credentials are &lt;code class=&quot;highlighter-rouge&quot;&gt;test:test&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;-fly-cli-tool&quot;&gt;&lt;a name=&quot;FlyTool&quot;&gt;&lt;/a&gt;&lt;img src=&quot;https://simpleicons.org/icons/concourse.svg&quot; width=&quot;3%&quot; /&gt; Fly cli tool&lt;/h2&gt;
+&lt;p&gt;Depends the OS you will need to use your package manager to install the fly tool.&lt;br /&gt;
+An easy way to get the fly tool is from here:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;curl -LO https://github.com/concourse/concourse/releases/download/v3.3.2/fly_linux_amd64&lt;/code&gt;&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo mv ./fly_linux_amd64 /usr/local/bin/fly&lt;/code&gt;&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo chmod +x /usr/local/bin/fly&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;fly&lt;/code&gt; cli tool is the tool used to control and manipulate concourse on it’s entirety.&lt;br /&gt;
+On the one of the next articles about concourse we will look more in depth on how to use this tool and a nice cheat-sheet to have around.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Logging in to Concourse with fly:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;fly --target test login --team-name main --concourse-url localhost:8080&lt;/code&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--target&lt;/code&gt; is used to name the current configuration&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--team-name&lt;/code&gt; is used to login to the default &lt;strong&gt;main&lt;/strong&gt; team&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--concourse-url&lt;/code&gt; is used to connect ot the url your concourse is running&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;--web-frontend&quot;&gt;&lt;a name=&quot;WebFrontend&quot;&gt;&lt;/a&gt;&lt;img src=&quot;https://simpleicons.org/icons/concourse.svg&quot; width=&quot;3%&quot; /&gt;  Web Frontend&lt;/h2&gt;
+
+&lt;details&gt;
+    &lt;summary&gt;Web frontend screenshot &lt;/summary&gt;
+&lt;img src=&quot;/assets/Start-with-Concouse-01/Start-with-Concouse-01-screen1.png&quot; width=&quot;40%&quot; /&gt;
+&lt;/details&gt;
+&lt;p&gt;Navigate to &lt;a href=&quot;http://localhost:8080&quot;&gt;http://localhost:8080&lt;/a&gt; in order to see the the web frontend.&lt;br /&gt;
+As mentioned before, use the username and password test.&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;-what-can-we-do-on-the-front-end&quot;&gt;&lt;a name=&quot;WebFrontend&quot;&gt;&lt;/a&gt;&lt;img src=&quot;https://simpleicons.org/icons/concourse.svg&quot; width=&quot;1%&quot; /&gt; What can we do on the front end?&lt;/h4&gt;
+
+&lt;p&gt;With Concourse frontend we can primarily visualize the pipelines. &lt;br /&gt;
+We can see the status, state, progress, dependencies between stages.
+A great addition to this frond end is the ability to see pipelines run by different teams ( based on the way someone logged-in )&lt;/p&gt;
+&lt;details&gt;
+    &lt;summary&gt;Pipeline screenshot &lt;/summary&gt;
+&lt;img src=&quot;/assets/Start-with-Concouse-01/Start-with-Concouse-01-screen2.png&quot; width=&quot;400px&quot; height=&quot;200px&quot; /&gt;
+&lt;img src=&quot;/assets/Start-with-Concouse-01/Start-with-Concouse-01-screen3.png&quot; width=&quot;400px&quot; height=&quot;200px&quot; /&gt;
+&lt;img src=&quot;/assets/Start-with-Concouse-01/Start-with-Concouse-01-screen4.png&quot; width=&quot;400px&quot; height=&quot;200px&quot; /&gt;
+&lt;img src=&quot;/assets/Start-with-Concouse-01/Start-with-Concouse-01-screen5.png&quot; width=&quot;400px&quot; height=&quot;200px&quot; /&gt;
+&lt;/details&gt;
+
+&lt;h2 id=&quot;--build-a-pipeline&quot;&gt;&lt;a name=&quot;Buildapipeline&quot;&gt;&lt;/a&gt;&lt;img src=&quot;https://simpleicons.org/icons/concourse.svg&quot; width=&quot;3%&quot; /&gt;  Build a Pipeline&lt;/h2&gt;
+
+&lt;p&gt;In order to build a pipeline we will need 3 steps&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Write the YAML&lt;/li&gt;
+  &lt;li&gt;Push the YAML on concourse&lt;/li&gt;
+  &lt;li&gt;See the pipeline from frontend&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;-write-the-yaml&quot;&gt;&lt;img src=&quot;https://simpleicons.org/icons/concourse.svg&quot; width=&quot;1%&quot; /&gt; Write the YAML&lt;/h4&gt;
+
+&lt;p&gt;Open your favorite editor and create a file &lt;code class=&quot;highlighter-rouge&quot;&gt;pipeline.yml&lt;/code&gt;
+Then paste the following text&lt;/p&gt;
+&lt;details&gt;
+    &lt;summary&gt;YAML Code &lt;/summary&gt;
+    &lt;pre&gt;
+---
+jobs:
+  - name: job
+    public: true
+    plan:
+      - task: simple-task
+        config:
+          platform: linux
+          image_resource:
+            type: registry-image
+            source: { repository: busybox }
+          run:
+            path: echo
+            args: [&quot;Hello, world!&quot;]
+&lt;/pre&gt;
+&lt;/details&gt;
+
+&lt;h4 id=&quot;-push-the-yaml-to-the-concourse-server&quot;&gt;&lt;a name=&quot;WebFrontend&quot;&gt;&lt;/a&gt;&lt;img src=&quot;https://simpleicons.org/icons/concourse.svg&quot; width=&quot;1%&quot; /&gt; Push the YAML to the concourse server&lt;/h4&gt;
+
+&lt;p&gt;Here we ae going to use the &lt;strong&gt;fly&lt;/strong&gt; cli tool. Open A terminal and paste the following&lt;br /&gt;
+  &lt;code class=&quot;highlighter-rouge&quot;&gt;fly -t test set-pipeline --pipeline my-pipeline --config pipeline.yml&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;At this stage &lt;strong&gt;fly&lt;/strong&gt; will give you a diff of the code it will send on the concourse server for you to check.&lt;br /&gt;
+After accepting the diff, &lt;strong&gt;fly&lt;/strong&gt; will push the code to the frontend and a worker will pick it up and execute it.&lt;br /&gt;
+In this case the pipeline will start in a &lt;strong&gt;pause&lt;/strong&gt; state. so we have the opportunity to manually start it.&lt;/p&gt;
+
+&lt;p&gt;Let’s got to the &lt;a href=&quot;http://localhost:8080&quot;&gt;frontend&lt;/a&gt; and review the pipeline.&lt;/p&gt;
+
+&lt;details&gt;
+    &lt;summary&gt;Pipeline screenshot&lt;/summary&gt;
+&lt;img src=&quot;/assets/Start-with-Concouse-01/Start-with-Concouse-01-screen6.png&quot; width=&quot;400px&quot; height=&quot;400px&quot; /&gt;
+&lt;img src=&quot;/assets/Start-with-Concouse-01/Start-with-Concouse-01-screen7.png&quot; width=&quot;400px&quot; height=&quot;400px&quot; /&gt;
+&lt;img src=&quot;/assets/Start-with-Concouse-01/Start-with-Concouse-01-screen8.png&quot; width=&quot;400px&quot; height=&quot;400px&quot; /&gt;
+&lt;img src=&quot;/assets/Start-with-Concouse-01/Start-with-Concouse-01-screen9.png&quot; width=&quot;400px&quot; height=&quot;400px&quot; /&gt;
+&lt;/details&gt;</content><author><name>John Stilia</name></author><category term="CICD" /><category term="Automation" /><category term="Pipelines" /><category term="Devops" /><summary type="html"></summary></entry><entry><title type="html">Hello World</title><link href="https://stiliajohny.github.io/init/2020/08/10/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2020-08-10T00:00:00+01:00</published><updated>2020-08-10T00:00:00+01:00</updated><id>https://stiliajohny.github.io/init/2020/08/10/Hello-World</id><content type="html" xml:base="https://stiliajohny.github.io/init/2020/08/10/Hello-World.html">&lt;h1 id=&quot;hello-world&quot;&gt;Hello World&lt;/h1&gt;</content><author><name>John Stilia</name></author><category term="init" /><summary type="html">Hello World</summary></entry></feed>
