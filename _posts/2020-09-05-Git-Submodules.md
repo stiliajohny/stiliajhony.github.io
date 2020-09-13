@@ -37,7 +37,7 @@ To make life a bit easier, you could amend your gitconfig located at `~/.gitconf
 ```
 
 ---
-## Git Submodule Cheatsheet
+## <img src="https://simpleicons.org/icons/git.svg" width="3%">  Git Submodule Cheatsheet
 
 
 #### Create a submodule in a currently existing repo</summary>
