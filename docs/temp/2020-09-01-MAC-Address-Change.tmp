@@ -50,13 +50,11 @@
 <meta property="og:title" content="MAC Address Change" />
 <meta name="author" content="John Stilia" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/mac%20address/2020/09/01/MAC-Address-Change.html" />
-<meta property="og:url" content="http://localhost:4000/mac%20address/2020/09/01/MAC-Address-Change.html" />
+<link rel="canonical" href="http://localhost:4000/temp/2020-09-01-MAC-Address-Change.tmp" />
+<meta property="og:url" content="http://localhost:4000/temp/2020-09-01-MAC-Address-Change.tmp" />
 <meta property="og:site_name" content="John Stilia" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-09-01T00:00:00+01:00" />
 <script type="application/ld+json">
-{"headline":"MAC Address Change","dateModified":"2020-09-01T00:00:00+01:00","datePublished":"2020-09-01T00:00:00+01:00","url":"http://localhost:4000/mac%20address/2020/09/01/MAC-Address-Change.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/mac%20address/2020/09/01/MAC-Address-Change.html"},"author":{"@type":"Person","name":"John Stilia"},"@context":"https://schema.org"}</script>
+{"headline":"MAC Address Change","url":"http://localhost:4000/temp/2020-09-01-MAC-Address-Change.tmp","@type":"WebPage","author":{"@type":"Person","name":"John Stilia"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -91,31 +89,25 @@
     <main class="sub-mid-section-cover">
         <h2>MAC Address Change</h2>
 <small></small>
-<p><span class="img-container">
-    <img src="/assets/mac-address-change-01.png" />
-</span></p>
+<span class="img-container">
+    <img src="/assets/mac-address-change-01.png">
+</span>
 
-<p>There are times you need to change the MAC address to emulate another device or just get free Airport WiFi.
-You may have few reasons.Maybe you want to hide your actual MAC address (also called physical address). <br />
-Other case can be that the network administrator might have blocked a particular MAC address in the router or firewall.</p>
+There are times you need to change the MAC address to emulate another device or just get free Airport WiFi.
+You may have few reasons.Maybe you want to hide your actual MAC address (also called physical address). <br>
+Other case can be that the network administrator might have blocked a particular MAC address in the router or firewall.
 
-<p>One great ‘benefit’ is that some public network (like Airport WiFi) allows free internet for a limited time. <br />
-If you want to use the internet after this limit, you just nee to trick the network believing tat you are a new device. It’s a famous meme as well.</p>
+One great ‘benefit’ is that some public network (like Airport WiFi) allows free internet for a limited time. <br>
+If you want to use the internet after this limit, you just nee to trick the network believing tat you are a new device. It’s a famous meme as well.
 
-<hr />
+---
 
-<p>Lets get straight into it.</p>
+Lets get straight into it.
 
-<p>First we need to find the interface you want to spoof the MAC address ( usually this is a wireless interfac  ).</p>
+First we need to find the interface you want to spoof the MAC address ( usually this is a wireless interfac  ).
 
-<ul>
-  <li>Open a terminal and look for wireless interface name
-    <ul>
-      <li><code class="highlighter-rouge">ip link show</code></li>
-    </ul>
-  </li>
-</ul>
-
+* Open a terminal and look for wireless interface name
+  * `ip link show`
 
 
 <div class="post-categories">
@@ -135,8 +127,8 @@ If you want to use the internet after this limit, you just nee to trick the netw
   <div id="disqus_thread"></div>
 <script>
   var disqus_config = function () {
-    this.page.url = 'http://localhost:4000/mac%20address/2020/09/01/MAC-Address-Change.html';
-    this.page.identifier = 'http://localhost:4000/mac%20address/2020/09/01/MAC-Address-Change.html';
+    this.page.url = 'http://localhost:4000/temp/2020-09-01-MAC-Address-Change.tmp';
+    this.page.identifier = 'http://localhost:4000/temp/2020-09-01-MAC-Address-Change.tmp';
   };
   (function() {
     var d = document, s = d.createElement('script');

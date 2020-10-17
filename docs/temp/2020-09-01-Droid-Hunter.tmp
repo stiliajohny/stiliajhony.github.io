@@ -50,13 +50,11 @@
 <meta property="og:title" content="Droid Hunter" />
 <meta name="author" content="John Stilia" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/android/tool/vulnerability/2020/09/01/Droid-Hunter.html" />
-<meta property="og:url" content="http://localhost:4000/android/tool/vulnerability/2020/09/01/Droid-Hunter.html" />
+<link rel="canonical" href="http://localhost:4000/temp/2020-09-01-Droid-Hunter.tmp" />
+<meta property="og:url" content="http://localhost:4000/temp/2020-09-01-Droid-Hunter.tmp" />
 <meta property="og:site_name" content="John Stilia" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-09-01T00:00:00+01:00" />
 <script type="application/ld+json">
-{"headline":"Droid Hunter","dateModified":"2020-09-01T00:00:00+01:00","datePublished":"2020-09-01T00:00:00+01:00","url":"http://localhost:4000/android/tool/vulnerability/2020/09/01/Droid-Hunter.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/android/tool/vulnerability/2020/09/01/Droid-Hunter.html"},"author":{"@type":"Person","name":"John Stilia"},"@context":"https://schema.org"}</script>
+{"headline":"Droid Hunter","url":"http://localhost:4000/temp/2020-09-01-Droid-Hunter.tmp","@type":"WebPage","author":{"@type":"Person","name":"John Stilia"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -91,10 +89,9 @@
     <main class="sub-mid-section-cover">
         <h2>Droid Hunter</h2>
 <small></small>
-<p><span class="img-container">
-    <img src="/assets/Droid-Hunter-01.png" />
-</span></p>
-
+<span class="img-container">
+    <img src="/assets/Droid-Hunter-01.png" >
+</span>
 
 
 <div class="post-categories">
@@ -120,8 +117,8 @@
   <div id="disqus_thread"></div>
 <script>
   var disqus_config = function () {
-    this.page.url = 'http://localhost:4000/android/tool/vulnerability/2020/09/01/Droid-Hunter.html';
-    this.page.identifier = 'http://localhost:4000/android/tool/vulnerability/2020/09/01/Droid-Hunter.html';
+    this.page.url = 'http://localhost:4000/temp/2020-09-01-Droid-Hunter.tmp';
+    this.page.identifier = 'http://localhost:4000/temp/2020-09-01-Droid-Hunter.tmp';
   };
   (function() {
     var d = document, s = d.createElement('script');

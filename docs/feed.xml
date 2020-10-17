@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-10-17T23:26:46+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">John Stilia</title><entry><title type="html">Git Submodules</title><link href="http://localhost:4000/git/submodule/version%20control/2020/09/05/Git-Submodules.html" rel="alternate" type="text/html" title="Git Submodules" /><published>2020-09-05T00:00:00+01:00</published><updated>2020-09-05T00:00:00+01:00</updated><id>http://localhost:4000/git/submodule/version%20control/2020/09/05/Git-Submodules</id><content type="html" xml:base="http://localhost:4000/git/submodule/version%20control/2020/09/05/Git-Submodules.html">&lt;p&gt;&lt;span class=&quot;img-container&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-10-17T23:38:53+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">John Stilia</title><entry><title type="html">Git Submodules</title><link href="http://localhost:4000/git/submodule/version%20control/2020/09/05/Git-Submodules.html" rel="alternate" type="text/html" title="Git Submodules" /><published>2020-09-05T00:00:00+01:00</published><updated>2020-09-05T00:00:00+01:00</updated><id>http://localhost:4000/git/submodule/version%20control/2020/09/05/Git-Submodules</id><content type="html" xml:base="http://localhost:4000/git/submodule/version%20control/2020/09/05/Git-Submodules.html">&lt;p&gt;&lt;span class=&quot;img-container&quot;&gt;
     &lt;img src=&quot;/assets/git-submodule-01.png&quot; /&gt;
 &lt;/span&gt;&lt;/p&gt;
 
@@ -52,66 +52,7 @@ If you make changes in the submodule, you need to &lt;code class=&quot;highlight
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; # Your repository will have .gitmodules file
  cd ~/repository
  git submodule update --init # Adding --recursive here will also update the submodule's submodule  if it exists
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>John Stilia</name></author><category term="git" /><category term="submodule" /><category term="version control" /><summary type="html"></summary></entry><entry><title type="html">Droid Hunter</title><link href="http://localhost:4000/android/tool/vulnerability/2020/09/01/Droid-Hunter.html" rel="alternate" type="text/html" title="Droid Hunter" /><published>2020-09-01T00:00:00+01:00</published><updated>2020-09-01T00:00:00+01:00</updated><id>http://localhost:4000/android/tool/vulnerability/2020/09/01/Droid-Hunter</id><content type="html" xml:base="http://localhost:4000/android/tool/vulnerability/2020/09/01/Droid-Hunter.html">&lt;p&gt;&lt;span class=&quot;img-container&quot;&gt;
-    &lt;img src=&quot;/assets/Droid-Hunter-01.png&quot; /&gt;
-&lt;/span&gt;&lt;/p&gt;</content><author><name>John Stilia</name></author><category term="android" /><category term="tool" /><category term="vulnerability" /><summary type="html"></summary></entry><entry><title type="html">MAC Address Change</title><link href="http://localhost:4000/mac%20address/2020/09/01/MAC-Address-Change.html" rel="alternate" type="text/html" title="MAC Address Change" /><published>2020-09-01T00:00:00+01:00</published><updated>2020-09-01T00:00:00+01:00</updated><id>http://localhost:4000/mac%20address/2020/09/01/MAC-Address-Change</id><content type="html" xml:base="http://localhost:4000/mac%20address/2020/09/01/MAC-Address-Change.html">&lt;p&gt;&lt;span class=&quot;img-container&quot;&gt;
-    &lt;img src=&quot;/assets/mac-address-change-01.png&quot; /&gt;
-&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;There are times you need to change the MAC address to emulate another device or just get free Airport WiFi.
-You may have few reasons.Maybe you want to hide your actual MAC address (also called physical address). &lt;br /&gt;
-Other case can be that the network administrator might have blocked a particular MAC address in the router or firewall.&lt;/p&gt;
-
-&lt;p&gt;One great ‘benefit’ is that some public network (like Airport WiFi) allows free internet for a limited time. &lt;br /&gt;
-If you want to use the internet after this limit, you just nee to trick the network believing tat you are a new device. It’s a famous meme as well.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Lets get straight into it.&lt;/p&gt;
-
-&lt;p&gt;First we need to find the interface you want to spoof the MAC address ( usually this is a wireless interfac  ).&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Open a terminal and look for wireless interface name
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ip link show&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>John Stilia</name></author><category term="MAC address" /><summary type="html"></summary></entry><entry><title type="html">Start with Ansible v1</title><link href="http://localhost:4000/ansible/provisioning/automation/2020/09/01/Start-with-Ansible-v1.html" rel="alternate" type="text/html" title="Start with Ansible v1" /><published>2020-09-01T00:00:00+01:00</published><updated>2020-09-01T00:00:00+01:00</updated><id>http://localhost:4000/ansible/provisioning/automation/2020/09/01/Start-with-Ansible-v1</id><content type="html" xml:base="http://localhost:4000/ansible/provisioning/automation/2020/09/01/Start-with-Ansible-v1.html">&lt;p&gt;&lt;span class=&quot;img-container&quot;&gt;
-    &lt;img src=&quot;/assets/Start-with-Ansible-01.png&quot; /&gt;
-&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;There must be times that you are unhappy and having enough of doing the same task on multiple machines.&lt;br /&gt;
-There must be times that you are upset of the same task having multiple steps and complex playbooks to follow.&lt;br /&gt;
-Finding your self in the Abyss of software installation and configurations that have dependencies on other steps not documented?&lt;/p&gt;
-
-&lt;p&gt;There is a solution, use Ansible.&lt;/p&gt;
-
-&lt;p&gt;Ansible is a simple to use Configuration Management tool that is based on yaml ( or json ) playbooks. Ansible is using normal SSH access to execute the pre-configured steps and it can follow dependencies and playbooks to your liking.&lt;/p&gt;
-
-&lt;p&gt;Using Ansible at first might be complicated but rest assured after few hours you will be writing your own playbooks abd complex configurations.&lt;/p&gt;
-
-&lt;p&gt;Lets dive in.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;To begging lets install Ansible on our operating system, detailed instructions can be found &lt;a href=&quot;https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html&quot;&gt;here&lt;/a&gt;.
-My chosen way to install Ansible is by using  &lt;strong&gt;python&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;install-pip&quot;&gt;Install PIP&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-$ python get-pip.py --user
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;install-anible-on-user-space&quot;&gt;Install anible on user space&lt;/h3&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip install --user ansible
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Ok, and now what?&lt;/p&gt;
-
-&lt;p&gt;Lets do some simple tasks with Ansible&lt;/p&gt;</content><author><name>John Stilia</name></author><category term="ansible" /><category term="provisioning" /><category term="automation" /><summary type="html"></summary></entry><entry><title type="html">Start with Concourse v.1</title><link href="http://localhost:4000/cicd/automation/pipelines/devops/2020/09/01/Start-with-Concourse-01.html" rel="alternate" type="text/html" title="Start with Concourse v.1" /><published>2020-09-01T00:00:00+01:00</published><updated>2020-09-01T00:00:00+01:00</updated><id>http://localhost:4000/cicd/automation/pipelines/devops/2020/09/01/Start-with-Concourse-01</id><content type="html" xml:base="http://localhost:4000/cicd/automation/pipelines/devops/2020/09/01/Start-with-Concourse-01.html">&lt;p&gt;&lt;span class=&quot;img-container&quot;&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>John Stilia</name></author><category term="git" /><category term="submodule" /><category term="version control" /><summary type="html"></summary></entry><entry><title type="html">Start with Concourse v.1</title><link href="http://localhost:4000/cicd/automation/pipelines/devops/2020/09/01/Start-with-Concourse-01.html" rel="alternate" type="text/html" title="Start with Concourse v.1" /><published>2020-09-01T00:00:00+01:00</published><updated>2020-09-01T00:00:00+01:00</updated><id>http://localhost:4000/cicd/automation/pipelines/devops/2020/09/01/Start-with-Concourse-01</id><content type="html" xml:base="http://localhost:4000/cicd/automation/pipelines/devops/2020/09/01/Start-with-Concourse-01.html">&lt;p&gt;&lt;span class=&quot;img-container&quot;&gt;
     &lt;img src=&quot;/assets/Start-with-Concouse-01/Start-with-Concouse-01.png&quot; /&gt;
 &lt;/span&gt;&lt;/p&gt;
 
