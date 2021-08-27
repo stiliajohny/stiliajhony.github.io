@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>John&#39;s blog</title>
+    <link>https://stiliajohny.github.io/</link>
+    <description>Recent content on John&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://stiliajohny.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github Docker Registry</title>
+      <link>https://stiliajohny.github.io/2021/08/github-docker-registry/</link>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stiliajohny.github.io/2021/08/github-docker-registry/</guid>
+      <description>Table of Contents    Account Preparation Push to Container registry  Attached Packages to Account Attached Packages to a Repo   Security      Account Preparation  Create a Repo here Create a new personal access token (PAT) with the appropriate scopes for the tasks you want to accomplish. If your organization requires SSO, you must enable SSO for your new token. Create Here Using the CLI for your container type, sign in to the Container registry service at ghcr.</description>
+    </item>
+    
+  </channel>
+</rss>
