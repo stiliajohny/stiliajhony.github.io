@@ -14,7 +14,8 @@ jobs:
     - uses: DavidAnson/markdownlint-cli2-action@v3
       with:
         globs: |
-          *.md
+          **/*.md
+          content/posts/*.md
 
   markdown-link-check:
     name: MD link checker
