@@ -8,6 +8,7 @@ jobs:
   md_linter:
     name: MD linter
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
     - name: Checkout master
       uses: actions/checkout@v2
