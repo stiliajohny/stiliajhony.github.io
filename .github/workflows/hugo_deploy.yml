@@ -6,7 +6,7 @@ on:
 
 jobs:
   build_hugo_static_site:
-    name: Deploy
+    name: Deploy hugo static site
     runs-on: ubuntu-latest
     steps:
       - name: Checkout master
@@ -22,6 +22,7 @@ jobs:
           TOKEN: ${{ secrets.HUGO_TOKEN }}
           
   sitemap-ping:
+    name: Google Sitemap Ping
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout Repository"
