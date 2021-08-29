@@ -20,4 +20,3 @@ jobs:
           TARGET_REPO: stiliajohny/stiliajohny.github.io
           TARGET_BRANCH: gh-pages
           TOKEN: ${{ secrets.HUGO_TOKEN }}
-          CNAME: stiliajohny.github.io
