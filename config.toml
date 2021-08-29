@@ -1,10 +1,11 @@
-baseURL = "https://stiliajohny.github.io"
-languageCode = "en-us"
+baseURL = "https://stiliajohny.github.io/"
 defaultContentLanguage = "en-us"
 title = "John's blog"
-theme = "hugo-tranquilpeak"
-disqusShortname = "hugo-tranquilpeak-theme"
-# googleAnalytics = "UA-123-45"
+theme = "tranquilpeak"
+disqusShortname = "stiliajony-github-io"
+[params.comment.disqus]
+  enable = true
+googleAnalytics = "UA-177229457-1"
 paginate = 7
 canonifyurls = true
 
@@ -18,15 +19,17 @@ canonifyurls = true
 
 
 
+
+
 # ------
 # Markup
 # ------
 [markup]
   # Set startLevel = 1 to support # title (<h1>title</h1>) otherwise table of content is blank/empty
   [markup.tableOfContents]
-    endLevel = 3
-    ordered = false
-    startLevel = 1
+    endLevel = 5
+    ordered = true
+    startLevel = 0
 
 # ------
 # Author
@@ -139,7 +142,7 @@ canonifyurls = true
 
   # Define categories will create hierarchy between parents: `categories = ["foo", "bar"]` will consider "bar" a sub-category of "foo".
   # If false it will flat categories.
-  hierarchicalCategories = true
+  hierarchicalCategories = false
 
   # Display `Next` on left side of the pagination, and `Prev` on right side one.
   # If you set this value to `true`, these positions swap.
