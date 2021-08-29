@@ -11,7 +11,7 @@ showPagination: true
 showSocial: true
 showTags: true
 summary: "Containerize all the things and store them in GitHub Container Registry"
-tags: [github, container, docker]
+tags: [GitHub, Dontainer, Docker, GHCR]
 thumbnailImage: https://github.githubassets.com/images/modules/site/social-cards/package-registry.png
 thumbnailImagePosition: left
 
