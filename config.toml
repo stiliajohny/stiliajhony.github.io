@@ -299,21 +299,11 @@ canonifyurls = true
   [[params.sharingOptions]]
     name = "Whatsapp"
     icon = "fab fa-whatsapp"
-    url = "whatsapp://send?text=%s"
-
-  # --------------
-  # Comment system
-  # --------------
-#  [params.comment]
-#    [params.comment.disqus]
-#      enable = true
-#      shortname = "hugo-tranquilpeak-theme"
-
+    url = "https://wa.me/?text=%s"
 
   # --------------------
   # Header configuration
   # --------------------
-
 
 [params.header.rightLink]
   class = ""
@@ -324,6 +314,6 @@ canonifyurls = true
   # Footer configuration
   # --------------------
 
-  # Customize copyright value "© 2021 <VALUE>. All Rights Reserved"
+  # Customize copyright value "© 2021 <COPYRIGHT>. All Rights Reserved"
     [params.footer]
       copyright = "<a href=\"https://github.com/stiliajohny\">stiliajohny</a>"
