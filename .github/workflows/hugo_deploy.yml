@@ -1,4 +1,4 @@
-name: Push to GitHub Pages on push to master
+name: Hugo blog
 on:
   push:
     branches:
@@ -20,12 +20,12 @@ jobs:
           TARGET_REPO: stiliajohny/stiliajohny.github.io
           TARGET_BRANCH: gh-pages
           TOKEN: ${{ secrets.HUGO_TOKEN }}
+          
   sitemap-ping:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: "Checkout Repository"
         uses: actions/checkout@v2
-
       - name: ping
         env:
           MAP_URL: "NULL" # set custom URL if you use it
