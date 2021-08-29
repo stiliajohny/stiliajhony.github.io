@@ -1,2 +1,13 @@
-- name: gh_pages-sitemap-ping
-  uses: Umio-Yasuno/gh_pages-sitemap-ping@v0.1
+name: Update Google ping
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Ping Google of the new Sitemap.xml
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy the site
+        uses: Umio-Yasuno/gh_pages-sitemap-ping@v0.1
