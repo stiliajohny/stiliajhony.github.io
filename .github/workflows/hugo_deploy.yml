@@ -18,6 +18,6 @@ jobs:
           GITHUB_ACTOR: hugo_bot_action
           HUGO_VERSION: 0.87.0
           TARGET_REPO: stiliajohny/stiliajohny.github.io
-          TARGET_BRANCH: master
+          TARGET_BRANCH: gh-pages
           TOKEN: ${{ secrets.HUGO_TOKEN }}
           CNAME: stiliajohny.github.io
