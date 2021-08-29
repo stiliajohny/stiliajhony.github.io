@@ -5,19 +5,32 @@ on:
       - master
 
 jobs:
-  markdown-link-check:
-    name: MD link checker
+  md_linter:
+    name: MD linter
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - name: Checkout master
+      uses: actions/checkout@v2
+    - uses: DavidAnson/markdownlint-cli2-action@v3
+      with:
+        globs: |
+          *.md
+
+  markdown-link-check:
+    name: MD link checker
+    needs: md_linter
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
     - uses: gaurav-nelson/github-action-markdown-link-check@v1
 
   build_hugo_static_site:
-    name: Deploy hugo static site
+    name: Deploy Hugo static site
     needs: markdown-link-check
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout master
+      - name: Checkout Repository
         uses: actions/checkout@v2
 
       - name: Deploy the site
