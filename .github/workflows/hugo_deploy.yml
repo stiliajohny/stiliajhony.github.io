@@ -5,8 +5,21 @@ on:
       - master
 
 jobs:
+  markdown-lint:
+    name: Markdown Lint
+    runs-on: ubuntu-latest
+    steps:
+    - name: Markdown linter
+      uses: articulate/actions-markdownlint@v1
+      with:
+        config: markdownlint-config.json
+        files: 'docs/**/*.md'
+        ignore: node_modules
+        version: 0.28.1
+
   build_hugo_static_site:
     name: Deploy hugo static site
+    needs: markdown-lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout master
@@ -42,3 +55,5 @@ jobs:
           curl -v "http://www.bing.com/ping?sitemap=${RSS_URL}" &> /dev/null &
           wait
           echo "Done"
+
+
