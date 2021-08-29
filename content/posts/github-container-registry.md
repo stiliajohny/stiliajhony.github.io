@@ -10,7 +10,7 @@ showDate: true
 showPagination: true
 showSocial: true
 showTags: true
-summary: "Cotainerise all the things and store them in GitHub Container Registry"
+summary: "Containerize all the things and store them in GitHub Container Registry"
 tags: [github, container, docker]
 thumbnailImage: https://github.githubassets.com/images/modules/site/social-cards/package-registry.png
 thumbnailImagePosition: left
@@ -23,28 +23,35 @@ thumbnailImagePosition: left
 
 # Account Preparation
 
-1.  Create a Repo [here](https://github.com/new)
-2.  Create a new personal access token (PAT) with the appropriate scopes for the tasks you want to accomplish. If your organization requires SSO, you must enable SSO for your new token. [create here](https://github.com/settings/tokens/new?scopes=write:packages,delete:packages)
-3.  Using the CLI for your container type, sign in to the Container registry service at ghcr.io.<br>
-    ```shell
-    echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
-    ```
-4.  Save your PAT. I recommend saving your PAT as an environment variable usong the command `read`. This command will expect a user input, paste your token and press enter ( nothing will be saved to the terminal history ).<br>
+1. Create a Repo [here](https://github.com/new)
+1. Create a new personal access token (PAT) with the appropriate scopes for the tasks you want to accomplish. If your organization requires SSO, you must enable SSO for your new token. [create here](https://github.com/settings/tokens/new?scopes=write:packages,delete:packages)
+
+1. Save your PAT. I recommend saving your PAT as an environment variable usong the command `read`. This command will expect a user input, paste your token and press enter ( nothing will be saved to the terminal history ).
+
     ```shell
     read CR_PAT
+    ```
+
+1. Using the CLI for your container type, sign in to the Container registry service at ghcr.io.
+
+    ```shell
+    echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
     ```
 
 # Push to Container registry
 
 ## Attached Packages to Account
 
-1.  Write your Docekrfile
-2.  Building container images<br>
+1. Write your Docekrfile
+2. Building container images<br>
+
     ```shell
     $ docker build -t hello_docker .
     ```
-3.  Tagging container images
-    1.  Find the ID for the Docker image you want to tag.
+
+3. Tagging container images
+    1. Find the ID for the Docker image you want to tag.
+
         ```shell
         $ docker images
         > REPOSITORY                                            TAG                 IMAGE ID            CREATED             SIZE
@@ -52,11 +59,15 @@ thumbnailImagePosition: left
         > ghcr.io/my-username/hello_docker    latest              38f737a91f39        47 hours ago        91.7MB
         > hello-world                                           latest              fce289e99eb9        16 months ago       1.84kB
         ```
-    2.  Tag your Docker image using the image ID and your desired image name and hosting destination.
+
+    2. Tag your Docker image using the image ID and your desired image name and hosting destination.
+
         ```shell
         docker tag 38f737a91f39 ghcr.io/OWNER/NEW_IMAGE_NAME:latest
         ```
-    3.  Pushing container images
+
+    3. Pushing container images
+
         ```shell
         $ docker push ghcr.io/OWNER/IMAGE_NAME:latest
         ```
@@ -97,7 +108,7 @@ In order to attach a package to a specific repository add the following lable in
     3. Pushing container images
 
         ```shell
-        $ docker push ghcr.io/OWNER/IMAGE_NAME:latest
+        docker push ghcr.io/OWNER/IMAGE_NAME:latest
         ```
 
 # Security
