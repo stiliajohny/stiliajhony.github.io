@@ -19,7 +19,7 @@ jobs:
         run: |
           BASE_URL="https://stiliajohny.github.io"
           MAP_URL="${BASE_URL}/sitemap.xml"
-          RSS_URL="${BASE_URL}/posts/index.xml"
+          RSS_URL="${BASE_URL}/index.xml"
           sleep 3
           curl -v "http://www.google.com/ping?sitemap=${MAP_URL}" &> /dev/null &
           curl -v "http://www.bing.com/ping?sitemap=${RSS_URL}" &> /dev/null &
