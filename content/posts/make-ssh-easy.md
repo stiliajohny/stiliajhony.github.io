@@ -10,7 +10,7 @@ showDate: true
 showPagination: true
 showSocial: true
 showTags: true
-summary: "Streamline your SSH workflow but PIMPing your SSH config"
+summary: "Streamline your SSH workflow buy PIMPing your SSH config"
 tags: [Software, Config, SSH, Linux]
 thumbnailImage: https://devopstar.com/static/6dee6c3f496f82976afc5cc04155132f/f789f/streamline-your-ssh-workflow-keys.webp
 thumbnailImagePosition: right
