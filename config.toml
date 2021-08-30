@@ -299,7 +299,7 @@ canonifyurls = true
   [[params.sharingOptions]]
     name = "Whatsapp"
     icon = "fab fa-whatsapp"
-    url = "https://wa.me/?text=%s"
+    url = "https://wa.me/?text=Check%20this%20out%3A%20%0A%s"
 
   # --------------------
   # Header configuration
