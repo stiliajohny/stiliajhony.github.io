@@ -5,22 +5,8 @@ on:
       - master
 
 jobs:
-  md_linter:
-    name: MD linter
-    runs-on: ubuntu-latest
-    continue-on-error: true
-    steps:
-    - name: Checkout master
-      uses: actions/checkout@v2
-    - uses: DavidAnson/markdownlint-cli2-action@v3
-      with:
-        globs: |
-          **/*.md
-          content/posts/*.md
-
   markdown-link-check:
     name: MD link checker
-    needs: md_linter
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
@@ -40,6 +26,8 @@ jobs:
         env:
           GITHUB_ACTOR: hugo_bot_action
           HUGO_VERSION: 0.87.0
+          HUGO_EXTENDED: true
+          HUGO_ARGS: '-v'
           TARGET_REPO: stiliajohny/stiliajohny.github.io
           TARGET_BRANCH: gh-pages
           TOKEN: ${{ secrets.HUGO_TOKEN }}
