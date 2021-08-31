@@ -4,11 +4,11 @@ languageCode = "en-us"
 title = "John's blog"
 theme = "tranquilpeak"
 disqusShortname = "stiliajony-github-io"
-googleAnalytics ="UA-177229457-1"
+googleAnalytics ="G-K4XG52VPLJ"
 paginate = 7
 canonifyurls = true
 
-[params.googleAnalytics]
+[params.googleAnalytics]https://
   async = true
 
 [permalinks]
