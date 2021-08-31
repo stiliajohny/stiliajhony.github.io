@@ -8,7 +8,7 @@ googleAnalytics ="G-K4XG52VPLJ"
 paginate = 7
 canonifyurls = true
 
-[params.googleAnalytics]https://
+[params.googleAnalytics]
   async = true
 
 [permalinks]
