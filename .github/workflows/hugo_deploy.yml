@@ -5,8 +5,17 @@ on:
       - master
 
 jobs:
+  merge_conflict_job:
+    runs-on: ubuntu-latest
+    name: Find merge conflicts
+    steps:
+      - uses: actions/checkout@v2
+      - name: Merge Conflict finder
+        uses: olivernybroe/action-conflict-finder@v2.0
+
   markdown-link-check:
     name: MD link checker
+    needs: merge_conflict_job
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
