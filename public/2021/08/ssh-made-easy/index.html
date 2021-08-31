@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "SSH made easy",
+  
+  "image": "https://devopstar.com/static/6dee6c3f496f82976afc5cc04155132f/f789f/streamline-your-ssh-workflow-keys.webp",
+  
+  "datePublished": "2021-08-30T00:00:00Z",
+  "dateModified": "2021-08-30T00:00:00Z",
+  "author": {
+    "@type": "Person",
+    "name": "John Stilia",
+    
+    "image": "https://avatars.githubusercontent.com/u/17669235?v=4"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/stiliajohny.github.io\/2021\/08\/ssh-made-easy\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "John's blog",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://avatars.githubusercontent.com/u/17669235?v=4"
+    }
+    
+  },
+  "description": "Streamline your SSH workflow by PIMPing your SSH config",
+  "keywords": []
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.87.0 with theme Tranquilpeak 0.5.0-BETA">
+<meta name="author" content="John Stilia">
+<meta name="keywords" content="">
+<meta name="description" content="Streamline your SSH workflow by PIMPing your SSH config">
+
+
+<meta property="og:description" content="Streamline your SSH workflow by PIMPing your SSH config">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SSH made easy">
+<meta name="twitter:title" content="SSH made easy">
+<meta property="og:url" content="https://stiliajohny.github.io/2021/08/ssh-made-easy/">
+<meta property="twitter:url" content="https://stiliajohny.github.io/2021/08/ssh-made-easy/">
+<meta property="og:site_name" content="John&#39;s blog">
+<meta property="og:description" content="Streamline your SSH workflow by PIMPing your SSH config">
+<meta name="twitter:description" content="Streamline your SSH workflow by PIMPing your SSH config">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2021-08-30T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2021-08-30T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="Software">
+    
+      <meta property="article:section" content="Config">
+    
+      <meta property="article:section" content="SSH">
+    
+      <meta property="article:section" content="Linux">
+    
+  
+  
+    
+      <meta property="article:tag" content="Software">
+    
+      <meta property="article:tag" content="Config">
+    
+      <meta property="article:tag" content="SSH">
+    
+      <meta property="article:tag" content="Linux">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/17669235?v=4">
+  <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/17669235?v=4">
+
+
+
+
+
+  <meta property="og:image" content="https://devopstar.com/static/6dee6c3f496f82976afc5cc04155132f/f789f/streamline-your-ssh-workflow-keys.webp">
+  <meta property="twitter:image" content="https://devopstar.com/static/6dee6c3f496f82976afc5cc04155132f/f789f/streamline-your-ssh-workflow-keys.webp">
+
+
+    <title>SSH made easy</title>
+
+    <link rel="icon" href="https://stiliajohny.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://stiliajohny.github.io/2021/08/ssh-made-easy/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://stiliajohny.github.io/css/style-x4v5aep1xln8tw4u8b4utrzzm45rcnnq6emr4myqn5eka2yri56y1t7q.min.css" />
+    
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-177229457-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://stiliajohny.github.io/" aria-label="Go to homepage">John&#39;s blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://stiliajohny.github.io/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://avatars.githubusercontent.com/u/17669235?v=4" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://stiliajohny.github.io/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://avatars.githubusercontent.com/u/17669235?v=4" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">John Stilia</h4>
+        
+          <h5 class="sidebar-profile-bio">Arch User, Container maker, Functional Programming, Electronics tinkerer</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stiliajohny.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stiliajohny.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stiliajohny.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stiliajohny.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stiliajohny.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/stiliajohny" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/johnstilia/r" target="_blank" rel="noopener" title="LinkedIn">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://join.slack.com/t/darkmamba/shared_invite/zt-uq11xbps-zIovONZDvfjSKPLyBQrnuA" target="_blank" rel="noopener" title="Slack">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-slack" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Slack</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stiliajohny.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      SSH made easy
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-08-30T00:00:00Z">
+        
+  
+  
+  
+  
+    30 August 2021
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://stiliajohny.github.io/categories/software">Software</a>, 
+    
+      <a class="category-link" href="https://stiliajohny.github.io/categories/config">Config</a>, 
+    
+      <a class="category-link" href="https://stiliajohny.github.io/categories/ssh">SSH</a>, 
+    
+      <a class="category-link" href="https://stiliajohny.github.io/categories/linux">Linux</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <h1 id="table-of-contents">Table of Contents</h1>
+<nav id="TableOfContents">
+  <ol>
+    <li><a href="#what-is-ssh-agent-and-ssh-config">What is SSH Agent and SSH config</a></li>
+    <li><a href="#create-an-ssh-key">Create an SSH key</a></li>
+    <li><a href="#pimp-your-config">PIMP your config</a></li>
+    <li><a href="#the-cherry-on-the-cake-ssh-add">The cherry on the cake: ssh-add</a></li>
+  </ol>
+</nav>
+
+<hr>
+<h1 id="what-is-ssh-agent-and-ssh-config">What is SSH Agent and SSH config</h1>
+<p>The <a href="https://linux.die.net/man/1/ssh-agent">ssh-agent</a> tool, in conjunction with SSH key authentication, makes it possible for you to start a session and, as long as you are within that session, you can log in and out of a remote server without having to type an SSH password or authentication passphrase. Once you’ve finished with your remote work, end the session and all is well.</p>
+<p>The <a href="https://github.com/stiliajohny/dotfiles/blob/master/.ssh/config">ssh config</a> is a file usually located under <code>~/.ssh/config</code> for every user and instructs the ssh-agent on how to establish a connection on a given host ( username, keypair, etc )</p>
+<h1 id="create-an-ssh-key">Create an SSH key</h1>
+<p>On the system, you want to SSH from open a terminal and execute the following commands.</p>
+<ol>
+<li>
+<p>Create a keypair.</p>
+<ul>
+<li><code>-t</code>: Choosing the algorithm (I&rsquo;ve chosen ed25519)</li>
+<li><code>-f</code>: Choose the path to save the keypair. Consider using a name pattern that suggests the algorithm and where you use the key as you might end up having many.</li>
+<li><code>-C</code>: Add a comment in the keypair</li>
+</ul>
+<span class="highlight-text warning"> Consider using a password on  your keypair </span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ssh-keygen -t ed25519 -f ~/.ssh/ssh_keypair_aws_ed25519_passwd -C <span style="color:#e6db74">&#34;this is a comment&#34;</span>
+</code></pre></div></li>
+<li>
+<p>Once you’ve created your SSH key-pair, you’ll then need to copy the private key to the server you are planning to log in password free</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ssh-copy-id ubuntu@52.45.123.65
+</code></pre></div></li>
+</ol>
+<h1 id="pimp-your-config">PIMP your config</h1>
+<p>Let&rsquo;s assume you are in a situation that you have AWS, GCP, Digital Ocean. Ideally, you want to have different keys for the different providers/environments and potentially different users across.
+Let see how we can PIMP the config to accommodate those settings without complexity.</p>
+<ol>
+<li>
+<p>Create the folder structure.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ tree ~/.ssh
+~/.ssh
+├── authorized_keys
+├── config
+├── config.d
+│   ├── aws_infra
+│   ├── gcp_infra
+│   ├── github
+│   ├── oci_infra
+│   ├── proxmox_infra
+│   └── rpi_infra
+├── github_ed25519_P
+├── github_ed25519_P.pub
+├── aws_ed25519_P
+├── aws_ed25519_P.pub
+├── gcp_ed25519_P
+├── gcp_ed25519_P.pub
+├── rpi_ed25519_P
+├── rpi_ed25519_P.pub
+├── digiocean_ed25519_P
+└── digiocean_ed25519_P.pub
+</code></pre></div><span class="highlight-text blue"> Create the key-pairs in advance based on your needs.</span>
+</li>
+<li>
+<p>Now let&rsquo;s edit the main ssh config located at <code>~/.ssh/config</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Include config.d/*
+
+Host * !github.com  <span style="color:#75715e">#github doesn&#39;t like complex settings ( in particular TTY requests)</span>
+  Compression yes
+  ControlMaster auto
+  ControlPersist <span style="color:#ae81ff">4800</span>
+  ForwardAgent no
+  ForwardX11 yes
+  HashKnownHosts yes
+  IdentitiesOnly yes
+  LogLevel VERBOSE
+  MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,umac-128@openssh.com
+  KexAlgorithms curve25519-sha256@libssh.org,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256
+  Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
+  PasswordAuthentication no
+  PubkeyAuthentication yes
+  PreferredAuthentications publickey
+  Protocol <span style="color:#ae81ff">2</span>
+  RequestTTY yes
+  TCPKeepAlive yes
+  VisualHostKey yes
+</code></pre></div><span class="highlight-text warning"> Those settings are a suggestion. Do your research before using them on your system</span>
+<p>We can now see on the first line it includes the context of the folder <code>config.d</code></p>
+</li>
+<li>
+<p>We are now going to create the <code>config.d/</code> configs.</p>
+<ol>
+<li>
+<p>Github: Located under <code>~/.ssh/config.d/github</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Host github.com
+  HostName github.com
+  IdentityFile ~/.ssh/github_ed25519_P
+  User git
+</code></pre></div></li>
+<li>
+<p>RaspberryPi: Located under <code>~/.ssh/config.d/rpi_infra</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Host 192.168.1.2
+    HostName 192.168.1.2
+    IdentityFile ~/.ssh/rpi_ed25519_P
+    User ubuntu
+
+Host 192.168.1.3
+    HostName 192.168.1.3
+    IdentityFile ~/.ssh/rpi_ed25519_P
+    User raspberrypi
+</code></pre></div></li>
+<li>
+<p>AWS: Located under <code>~/.ssh/config.d/aws_infra</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Host JUMPBOX
+    HostName 10.0.2.1
+    IdentityFile ~/.ssh/aws_ed25519_P
+    User ubuntu
+
+Host DB
+  ProxyJump 10.0.2.1
+    IdentityFile ~/.ssh/aws_ed25519_P
+    User ubuntu
+Host WEB
+  ProxyJump 10.0.2.2
+    IdentityFile ~/.ssh/aws_ed25519_P
+    User automation
+</code></pre></div></li>
+</ol>
+<p>On the latest config ( AWS ) we can see the use of <code>ProxyJump</code>, more on this in a future article</p>
+<p>You might have noticed, on the definition of <code>Host</code> some have an IP some have a Name. This is due to the flexibility of SSH to give entries a &ldquo;nickname&rdquo;.</p>
+<p>That way you can do:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ssh WEB
+</code></pre></div></li>
+</ol>
+<h1 id="the-cherry-on-the-cake-ssh-add">The cherry on the cake: ssh-add</h1>
+<p>As you might have already done, your ssh private keys have a password configured.</p>
+<p>If you find yourself connecting to remote servers multiple times, ssh-agent will ask you to provide the password.
+To minimize the headache, add the keys you want to use most of the time in the ssh authentications agent for implementing single sign-on</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ssh-add ~/.ssh/github_ed25519_P
+Enter passphrase <span style="color:#66d9ef">for</span> ~/.ssh/github_ed25519_P:
+Identity added: ~/.ssh/github_ed25519_P <span style="color:#f92672">(</span>git@my_laptop<span style="color:#f92672">)</span>
+</code></pre></div><p>Then you can view all the added keys by using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ssh-add -L
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP3oC2Z/xSCUldQ8tTCP+EyaOspgZI4mXvWwvDyg1PLd git@my_laptop
+</code></pre></div>
+              
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://stiliajohny.github.io/tags/software/">Software</a>
+
+  <a class="tag tag--primary tag--small" href="https://stiliajohny.github.io/tags/config/">Config</a>
+
+  <a class="tag tag--primary tag--small" href="https://stiliajohny.github.io/tags/ssh/">SSH</a>
+
+  <a class="tag tag--primary tag--small" href="https://stiliajohny.github.io/tags/linux/">Linux</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://stiliajohny.github.io/2021/08/github-container-registry/" data-tooltip="Github Container Registry" aria-label="PREVIOUS: Github Container Registry">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <i class="fa fa-share-alt" aria-hidden="true"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://stiliajohny.github.io/2021/08/ssh-made-easy/" title="Share on %s Facebook" aria-label="Share on %s Facebook">
+              <i class="fab fa-facebook-square" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://stiliajohny.github.io/2021/08/ssh-made-easy/" title="Share on %s Twitter" aria-label="Share on %s Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://wa.me/?text=https://stiliajohny.github.io/2021/08/ssh-made-easy/" title="Share on %s Whatsapp" aria-label="Share on %s Whatsapp">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://stiliajohny.github.io/2021/08/ssh-made-easy/" title="Share on %s Linkedin" aria-label="Share on %s Linkedin">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+        
+          <i class="fa fa-list" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 <a href="https://github.com/stiliajohny">stiliajohny</a>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://stiliajohny.github.io/2021/08/github-container-registry/" data-tooltip="Github Container Registry" aria-label="PREVIOUS: Github Container Registry">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <i class="fa fa-share-alt" aria-hidden="true"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://stiliajohny.github.io/2021/08/ssh-made-easy/" title="Share on %s Facebook" aria-label="Share on %s Facebook">
+              <i class="fab fa-facebook-square" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://stiliajohny.github.io/2021/08/ssh-made-easy/" title="Share on %s Twitter" aria-label="Share on %s Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://wa.me/?text=https://stiliajohny.github.io/2021/08/ssh-made-easy/" title="Share on %s Whatsapp" aria-label="Share on %s Whatsapp">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://stiliajohny.github.io/2021/08/ssh-made-easy/" title="Share on %s Linkedin" aria-label="Share on %s Linkedin">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+        
+          <i class="fa fa-list" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstiliajohny.github.io%2F2021%2F08%2Fssh-made-easy%2F" aria-label="Share on %s Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fstiliajohny.github.io%2F2021%2F08%2Fssh-made-easy%2F" aria-label="Share on %s Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://wa.me/?text=https%3A%2F%2Fstiliajohny.github.io%2F2021%2F08%2Fssh-made-easy%2F" aria-label="Share on %s Whatsapp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i><span>Share on Whatsapp</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fstiliajohny.github.io%2F2021%2F08%2Fssh-made-easy%2F" aria-label="Share on %s Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://avatars.githubusercontent.com/u/17669235?v=4" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">John Stilia</h4>
+    
+      <div id="about-card-bio">Arch User, Container maker, Functional Programming, Electronics tinkerer</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        DevSecOps, Security Engineer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        United Kingdom
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://stiliajohny.github.io/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://stiliajohny.github.io/js/script-8lglxdix2nqhalxxm2bujhkcc8cctdrd5o5axonwhfzx2zqrer5facyn8.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

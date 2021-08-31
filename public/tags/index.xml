@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on John&#39;s blog</title>
+    <link>https://stiliajohny.github.io/tags/</link>
+    <description>Recent content in Tags on John&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://stiliajohny.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Config</title>
+      <link>https://stiliajohny.github.io/tags/config/</link>
+      <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stiliajohny.github.io/tags/config/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://stiliajohny.github.io/tags/linux/</link>
+      <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stiliajohny.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software</title>
+      <link>https://stiliajohny.github.io/tags/software/</link>
+      <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stiliajohny.github.io/tags/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SSH</title>
+      <link>https://stiliajohny.github.io/tags/ssh/</link>
+      <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stiliajohny.github.io/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://stiliajohny.github.io/tags/docker/</link>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stiliajohny.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dontainer</title>
+      <link>https://stiliajohny.github.io/tags/dontainer/</link>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stiliajohny.github.io/tags/dontainer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GHCR</title>
+      <link>https://stiliajohny.github.io/tags/ghcr/</link>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stiliajohny.github.io/tags/ghcr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GitHub</title>
+      <link>https://stiliajohny.github.io/tags/github/</link>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stiliajohny.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
