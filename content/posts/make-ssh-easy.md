@@ -29,7 +29,7 @@ The [ssh config](https://github.com/stiliajohny/dotfiles/blob/master/.ssh/config
 
 # Create an SSH key
 
-On the system, you want to SSH from open a terminal and run execute the following commands.
+On the system, you want to SSH from open a terminal and execute the following commands.
 
 1. Create a keypair.
     - `-t`: Choosing the algorithm (I've chosen ed25519)
@@ -42,8 +42,7 @@ On the system, you want to SSH from open a terminal and run execute the followin
     ssh-keygen -t ed25519 -f ~/.ssh/ssh_keypair_aws_ed25519_passwd -C "this is a comment"
     ```
 
-1. Once you’ve created your SSH key, you’ll then need to copy it to the server you’ll be logging into password free
-
+1. Once you’ve created your SSH key-pair, you’ll then need to copy the private key to the server you are planning to log in password free
     ```shell
     ssh-copy-id ubuntu@52.45.123.65
     ```
