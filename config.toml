@@ -5,7 +5,9 @@ theme = "tranquilpeak"
 disqusShortname = "stiliajony-github-io"
 [params.comment.disqus]
   enable = true
-googleAnalytics = "UA-177229457-1"
+googleAnalytics ="UA-177229457-1"
+[params.googleAnalytics]
+  async = true
 paginate = 7
 canonifyurls = true
 
@@ -16,10 +18,6 @@ canonifyurls = true
   tag = "tags"
   category = "categories"
   archive = "archives"
-
-
-
-
 
 # ------
 # Markup
