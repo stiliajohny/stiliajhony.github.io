@@ -10,8 +10,7 @@ showDate: true
 showPagination: true
 showSocial: true
 showTags: true
-summary: "There have been few occasions recently where I needed to have a Docker container to be able to ssh into other machines in the network.
-The approach I have settled was to let the Docker container share the ssh agent of the host machine."
+summary: "There have been few occasions recently where I needed to have a Docker container to be able to ssh into other machines in the network"
 tags: [Linux, SSH, Docker]
 thumbnailImage: https://www.mytampabayelectrician.com/wp-content/uploads/2017/05/humming-outlet-e1494602544432.jpg
 thumbnailImagePosition: left
