@@ -26,7 +26,7 @@ thumbnailImagePosition: left
 1. Create a Repo [here](https://github.com/new)
 1. Create a new personal access token (PAT) with the appropriate scopes for the tasks you want to accomplish. If your organization requires SSO, you must enable SSO for your new token. [create here](https://github.com/settings/tokens/new?scopes=write:packages,delete:packages)
 
-1. Save your PAT. I recommend saving your PAT as an environment variable usong the command `read`. This command will expect a user input, paste your token and press enter ( nothing will be saved to the terminal history ).
+1. Save your PAT. I recommend saving your PAT as an environment variable usong the command `read`. This command will expect a user input, paste your token and press enter ( nothing will be saved to the terminal history ). 
 
     ```shell
     read CR_PAT
