@@ -14,7 +14,7 @@ summary: "There have been few occasions recently where I needed to have a Docker
 The approach I have settled was to let the Docker container share the ssh agent of the host machine."
 tags: [Linux, SSH, Docker]
 thumbnailImage: https://www.mytampabayelectrician.com/wp-content/uploads/2017/05/humming-outlet-e1494602544432.jpg
-thumbnailImagePosition: right
+thumbnailImagePosition: left
 ---
 
 {{< toc >}}
