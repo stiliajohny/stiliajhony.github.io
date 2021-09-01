@@ -8,6 +8,9 @@ googleAnalytics ="G-K4XG52VPLJ"
 paginate = 7
 canonifyurls = true
 
+[params.comment.disqus]
+  enable = true
+
 [params.googleAnalytics]
   async = true
 
@@ -304,6 +307,20 @@ canonifyurls = true
     icon = "fab fa-linkedin"
     url = "https://www.linkedin.com/sharing/share-offsite/?url=%s"
 
+  [[params.sharingOptions]]
+    name = "Reddit"
+    icon = "fab fa-reddit"
+    url = "https://www.reddit.com/submit?url=%s"
+
+  [[params.sharingOptions]]
+    name = "Pocket"
+    icon = "fab fa-get-pocket"
+    url = "https://getpocket.com/edit?url=%s"
+
+  [[params.sharingOptions]]
+    name = "Hacker News"
+    icon = "fab fa-hacker-news"
+    url = "https://news.ycombinator.com/submitlink?u=%s"
 
   # --------------------
   # Header configuration
