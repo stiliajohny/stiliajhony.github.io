@@ -326,10 +326,10 @@ canonifyurls = true
   # Header configuration
   # --------------------
 
-[params.header.rightLink]
-  class = ""
-  icon = ""
-  url = "/#about"
+#[params.header.rightLink]
+#  class = ""
+#  icon = ""
+#  url = "/#about"
 
   # --------------------
   # Footer configuration
