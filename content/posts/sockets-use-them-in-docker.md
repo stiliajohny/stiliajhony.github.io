@@ -65,7 +65,7 @@ Lets refresh our memory a bit:
 - Let's run a Docker container and mount this socket.
 
     ```shell
-    $ Docker run -it -e SSH_AUTH_SOCK=/ssh-agent -v ${SSH_AUTH_SOCK}:/ssh-agent ubuntu:latest /bin/bash
+    $ docker run -it -e SSH_AUTH_SOCK=/ssh-agent -v ${SSH_AUTH_SOCK}:/ssh-agent ubuntu:latest /bin/bash
     root@4a0ffef682f1:/#
     ```
 
