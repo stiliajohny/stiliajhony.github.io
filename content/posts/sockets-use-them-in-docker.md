@@ -31,7 +31,8 @@ While I was trying to find the best and arguably the most secure solution, I tho
 SSH agent creates a socket on init. Any ssh-agent can use the same or separate socket. On each socket, the agent can have ssh keys open for the life of the socket. Let's got to work!
 
 **EDIT**
-{{< hl-text RED >}}MacOS seems to be problematic with docker engine and linux sockets. watch this place for more updates{{< /hl-text >}}.
+
+{{< hl-text red >}}MacOS seems to be problematic with docker engine and linux sockets. watch this place for more updates{{< /hl-text >}}.
 
 # Sharing the SSH-Agent
 
