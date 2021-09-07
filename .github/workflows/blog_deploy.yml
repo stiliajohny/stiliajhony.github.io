@@ -17,6 +17,7 @@ jobs:
     name: MD link checker
     needs: merge_conflict_job
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
@@ -40,7 +41,7 @@ jobs:
           TARGET_REPO: stiliajohny/stiliajohny.github.io
           TARGET_BRANCH: gh-pages
           TOKEN: ${{ secrets.HUGO_TOKEN }}
-          
+
   sitemap-ping:
     name: Google Sitemap Ping
     needs: build_hugo_static_site
@@ -62,7 +63,7 @@ jobs:
           curl -v "http://www.bing.com/ping?sitemap=${RSS_URL}" &> /dev/null &
           wait
           echo "Done"
-          
+
 #   publish-medium:
 #     name: Cross-post to Medium
 #     needs: markdown-link-check
