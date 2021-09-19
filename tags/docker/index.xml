@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on John&#39;s blog</title>
+    <link>https://stiliajohny.github.io/tags/docker/</link>
+    <description>Recent content in Docker on John&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://stiliajohny.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>100mph on a docker-machine</title>
+      <link>https://stiliajohny.github.io/2021/09/100mph-on-a-docker-machine/</link>
+      <pubDate>Mon, 13 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stiliajohny.github.io/2021/09/100mph-on-a-docker-machine/</guid>
+      <description>Use multiple envidonments on your Local or Remote development with docker-machine</description>
+    </item>
+    
+    <item>
+      <title>SSH Sockets. Use them in Docker</title>
+      <link>https://stiliajohny.github.io/2021/09/ssh-sockets.-use-them-in-docker/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stiliajohny.github.io/2021/09/ssh-sockets.-use-them-in-docker/</guid>
+      <description>There have been few occasions recently where I needed to have a Docker container to be able to ssh into other machines in the network</description>
+    </item>
+    
+    <item>
+      <title>Github Container Registry</title>
+      <link>https://stiliajohny.github.io/2021/08/github-container-registry/</link>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stiliajohny.github.io/2021/08/github-container-registry/</guid>
+      <description>Containerize all the things and store them in GitHub Container Registry</description>
+    </item>
+    
+  </channel>
+</rss>
